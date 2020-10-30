@@ -23,7 +23,7 @@ Team Members:
 
 - [Assets](https://drive.google.com/drive/folders/1BjxuwwJl_1vnPyIMUVP1PaX4ptEjFxRn?usp=sharing)
 - [Zeplin](https://scene.zeplin.io/project/5f806a04a6f04374b3fc28d6)
-- [Complete Figme](https://www.figma.com/file/2ZIcvEJAQ08cZWwx8uYdIu/Elections-Team?node-id=99%3A137)
+- [Complete Figma](https://www.figma.com/file/2ZIcvEJAQ08cZWwx8uYdIu/Elections-Team?node-id=99%3A137)
 
 
 # Team Expectations
