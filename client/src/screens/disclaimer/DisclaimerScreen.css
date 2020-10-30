@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+.disclaimer {
+    font-family: 'Dosis', sans-serif;
+}
+
+.disclaimerUl {
+    display: inline-flex;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.disclaimerList {
+    list-style-type: none;
+    /* border: 0.5px solid gray;
+    border-radius: 15px; */
+    max-width: 400px;
+    display: block;
+}
+
+.disclaimerListContents {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    text-align: left;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 9px;
+    font-weight: 600;
+}
+
+.disclaimerButton {
+    margin-top: 30px;
+    padding: 1rem; 
+    border-radius: 30px;
+    border: 0.5px solid;
+    background-color: white;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+}
+
