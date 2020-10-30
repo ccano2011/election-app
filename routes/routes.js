@@ -1,12 +1,12 @@
 const { Router } = require('express')
-const controllers = require('../controllers/posts')
+const controllers = require('../controllers/requests')
 
 const router = Router()
 
-router.get('/users', controllers.getPosts)
-router.get('/users/:id', controllers.getPost)
-router.post('/users', controllers.createPost)
-router.put('/users/:id', controllers.updatePost)
-router.delete('/users/:id', controllers.deletePost)
+router.get('/ballotreq', controllers.getRequests)
+router.get('/ballotreq/:id', controllers.getRequest)
+router.post('/ballotreq', controllers.createRequest)
+router.put('/ballotreq/:id', controllers.updateRequest)
+router.delete('/ballotreq/:id', controllers.deleteRequest)
 
 module.exports = router
