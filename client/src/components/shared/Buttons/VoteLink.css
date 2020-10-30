@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
+
+.vote-img {
+  /* margin-left: -10px; */
+}
+
+.vote-text {
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}

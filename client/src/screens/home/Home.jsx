@@ -1,33 +1,31 @@
-import React from 'react';
+import React from "react";
+// import { Image } from 'react-native'
 // import Layout from '../../shared/Layout/Layout'
-import { Link } from 'react-router-dom';
-import Nav from '../../components/shared/Nav/Nav'
-// import TrackerImg from "../../Assets/TrackYourBallotLogo.png";
-import './Home.css'
-
+import { Link } from "react-router-dom";
+import Nav from "../../components/shared/Nav/Nav";
+import "./Home.css";
+import TrackButton from "../../components/shared/Buttons/TrackYourVoteButton";
+import VoteButton from "../../components/shared/Buttons/VoteLinkBtn";
+import AbsenteeButton from "../../components/shared/Buttons/AbsenteeBtn";
+import CalendarButton from "../../components/shared/Buttons/Calendarbtn";
 
 const Home = () => {
-    return (
-        <div>
-            <Nav />
-            <body>
-                <button className='tracker-btn'>
-                    <Link className='tracker-link' > Track Your Ballot </Link>
-                </button>
-                <button className='vote-btn'>
-                    <a href="https://www.vote.org/state/new-york/" target="_blank" rel="noreferrer">
-                        Vote.org
-                    </a>
-                </button>
-                <Link className='absentee-link' to="/disclaimer">
-                    <button className='absentee-btn'>
-                        Absentee Ballot
-                    </button>
-                </Link>
-            </body>
-        </div>
+  return (
+    <div className="homepage">
+      <div>
+        <Nav />
+      </div>
+      <div className="hp-buttons">
+        <TrackButton />
 
-    );
+        <VoteButton />
+
+        <AbsenteeButton />
+
+        <CalendarButton />
+      </div>
+    </div>
+  );
 };
 
 export default Home;
