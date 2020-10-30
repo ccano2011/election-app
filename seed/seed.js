@@ -8,16 +8,16 @@ const main = async () => {
     const users =
         [
             {
-                "title": "Our first Full-Stack Group Exercise",
-                "imgURL": "https://blog.eduonix.com/wp-content/uploads/2018/09/Full-Stack-Developer.jpg",
-                "content": "Getting our feet wet in what will hopefully be our jobs later in the future!",
-                "author": "Chris"
-            },
-            {
-                "title": "With a Great Blog....",
-                "imgURL": "https://frontburnermarketing.net/wp-content/uploads/2020/04/Blogging-for-Small-Business-Owners.jpg",
-                "content": "...comes a great Post",
-                "author": "Uncle Ben"
+                "firstName": "Lorem",
+                "lastName": "Ipsum",
+                "streetAddress": "1 Murray Street",
+                "apartmentSuite": "#101",
+                "city": "New York",
+                "state": "New York",
+                "zipCode": "10007",
+                "dob": "01/01/1970",
+                "email": "YahooHotmail@aol.com",
+                "cell": "(123) 456-789"
             },
         ]
     await Schema.insertMany(users)
