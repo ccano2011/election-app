@@ -1,5 +1,16 @@
-ballot-form{
+.ballot-form{
   display: flex;
-  
+  flex-direction: column;
+}
 
+.confirm-button, .cancel-button{
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  margin-top: 40px;
+  border: none;
+  box-shadow: 2px 2px 10px 2px #cecece;
+  cursor: pointer;
+  width: 10%;
+  align-self: center;
 }
