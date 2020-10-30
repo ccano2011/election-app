@@ -1,21 +1,35 @@
 import React from 'react';
+// import { Image } from 'react-native'
 // import Layout from '../../shared/Layout/Layout'
 import { Link } from 'react-router-dom';
-// import TrackerImg from "../../Assets/TrackYourBallotLogo.png";
-
-
+import Nav from '../../components/shared/Nav/Nav'
+import "./Home.css";
+import AbsenteeImg from '../../Assets/ToDoList.png'
+import Calendar from '../../Assets/Calendar.png'
+import TrackButton from '../../components/shared/Buttons/TrackYourVoteButton'
+import VoteButton from '../../components/shared/Buttons/VoteLinkBtn'
+import AbsenteeButton from '../../components/shared/Buttons/AbsenteeBtn'
+import CalendarButton from '../../components/shared/Buttons/Calendarbtn'
 
 const Home = () => {
+
+  
+
   return (
-    
+    <div className='homepage'>
       <div>
-      <button className='tracker-btn'>
+        <Nav />
+      </div>
+      <div className='hp-buttons'> 
+    
+        <TrackButton/>
+       
+        <VoteButton/>
         
-        <Link className='tracker-link' > Track Your Ballot </Link>
-      </button>
-        <button className='vote-btn'><Link className='vote-link' > Vote.org </Link> </button>
-        <button className='absentee-btn'><Link className='absentee-link' > Absentee Ballot </Link> </button>
-      
+        <AbsenteeButton />
+        
+        <CalendarButton/>
+      </div>
     </div>
   
   );
