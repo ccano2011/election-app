@@ -3,8 +3,6 @@ import './Nav.css';
 import Burger from 'react-css-burger';
 
 
-
-
 class Nav extends Component {
     
     state = {
