@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        <Nav />
         <Route exact path='/' component={Home}/>
         <Route path="/request-ballot" component = {RequestBallotScreen}/>
       </Switch>
