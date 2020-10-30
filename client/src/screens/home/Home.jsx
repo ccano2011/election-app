@@ -1,43 +1,30 @@
-import React from 'react';
+import React from "react";
 // import { Image } from 'react-native'
 // import Layout from '../../shared/Layout/Layout'
-import { Link } from 'react-router-dom';
-import Nav from '../../components/shared/Nav/Nav'
+import { Link } from "react-router-dom";
+import Nav from "../../components/shared/Nav/Nav";
 import "./Home.css";
-import AbsenteeImg from '../../Assets/ToDoList.png'
-import Calendar from '../../Assets/Calendar.png'
-import TrackButton from '../../components/shared/Buttons/TrackYourVoteButton'
-import VoteButton from '../../components/shared/Buttons/VoteLinkBtn'
-import AbsenteeButton from '../../components/shared/Buttons/AbsenteeBtn'
-import CalendarButton from '../../components/shared/Buttons/Calendarbtn'
+import TrackButton from "../../components/shared/Buttons/TrackYourVoteButton";
+import VoteButton from "../../components/shared/Buttons/VoteLinkBtn";
+import AbsenteeButton from "../../components/shared/Buttons/AbsenteeBtn";
+import CalendarButton from "../../components/shared/Buttons/Calendarbtn";
 
 const Home = () => {
-
-  
-
   return (
-    <div className='homepage'>
+    <div className="homepage">
       <div>
         <Nav />
       </div>
-      <div className='hp-buttons'> 
-    
-        <TrackButton/>
-       
-        <VoteButton/>
-        
+      <div className="hp-buttons">
+        <TrackButton />
+
+        <VoteButton />
+
         <AbsenteeButton />
-        
-        <CalendarButton/>
-        {/* <div>
-          <a className='link' href="https://vote.nyc/" target='_blanck'>
-            Important Dates
-          <img src={Calendar} alt='Calendar Img' />
-          </a>
-       </div> */}
+
+        <CalendarButton />
       </div>
     </div>
-  
   );
 };
 
