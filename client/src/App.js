@@ -5,6 +5,7 @@ import Nav from './components/shared/Nav/Nav'
 import RequestBallotScreen from "./screens/requestballot/RequestBallotScreen"
 import { Route, Switch } from "react-router-dom"
 import DisclaimerScreen from "./screens/disclaimer/DisclaimerScreen";
+import AdminScreen from "./screens/admin/AdminScreen"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/disclaimer' component={DisclaimerScreen} />
         <Route path="/request-ballot" component={RequestBallotScreen} />
+        <Route path="/admin" component={AdminScreen} />
       </Switch>
     </div>
   );
