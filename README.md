@@ -12,7 +12,7 @@ Team Members:
 
 - [Ballot-Request Whimsical](https://whimsical.com/5hp8zvk6E1jwmU3gSpYndv)
 
-![Imgur](https://i.imgur.com/kofWAQP.png)
+![Imgur](https://i.imgur.com/JtIYYzs.png)
 
 - [Election Team High-Fidelity Mobile Figma](https://www.figma.com/file/uI6hwQTjMUy0VTsEojnrGT/Elections-Team-Copy?node-id=99%3A137)
 

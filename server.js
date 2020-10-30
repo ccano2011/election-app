@@ -20,61 +20,61 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
 
-app.get('/', (req, res) => res.send("Elections Back-end Root; Test CRUD in postman with localhost:3000/users"))
+app.get('/', (req, res) => res.send("Elections Back-end Root; Test CRUD in postman with localhost:3000/ballotreq"))
 
-app.get('/users', async (req, res) => {
+app.get('/ballotreq', async (req, res) => {
     try {
-        const users = await Schema.find()
-        res.json(users)
+        const info = await Schema.find()
+        res.json(info)
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
 })
 
-app.get('/users/:id', async (req, res) => {
+app.get('/ballotreq/:id', async (req, res) => {
     try {
         const { id } = req.params
-        const users = await Schema.findById(id)
-        if (!user) throw Error('User not found!')
-        res.json(user)
+        const info = await Schema.findById(id)
+        if (!info) throw Error('Request not found!')
+        res.json(info)
     } catch (e) {
         console.log(e)
-        res.send('User not found!')
+        res.send('Catch error: request not found!')
     }
 })
 
-app.post('/users', async (req, res) => {
+app.post('/ballotreq', async (req, res) => {
     try {
-        const user = await new Schema(req.body)
-        await user.save()
-        res.status(201).json(user)
+        const info = await new Schema(req.body)
+        await info.save()
+        res.status(201).json(info)
     } catch (error) {
         console.log(error)
         res.status(500).json({ error: error.message })
     }
 })
 
-app.put('/users/:id', async (req, res) => {
+app.put('/ballotreq/:id', async (req, res) => {
     const { id } = req.params
-    await Schema.findByIdAndUpdate(id, req.body, { new: true }, (error, user) => {
+    await Schema.findByIdAndUpdate(id, req.body, { new: true }, (error, info) => {
         if (error) {
             return res.status(500).json({ error: error.message })
         }
-        if (!user) {
-            return res.status(404).json({ message: 'Post not found!' })
+        if (!info) {
+            return res.status(404).json({ message: 'Info not found!' })
         }
-        res.status(200).json(user)
+        res.status(200).json(info)
     })
 })
 
-app.delete('/users/:id', async (req, res) => {
+app.delete('/ballotreq/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const deleted = await Schema.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("User deleted")
+            return res.status(200).send("Request deleted, democracy subverted")
         }
-        throw new Error("User not found")
+        throw new Error("Request not found, sorry Putin")
     } catch (error) {
         res.status(500).json({ error: error.message })
     }

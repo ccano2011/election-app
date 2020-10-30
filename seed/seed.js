@@ -5,7 +5,7 @@ const Schema = require('../models/schema')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const users =
+    const info =
         [
             {
                 "firstName": "Lorem",
@@ -20,8 +20,8 @@ const main = async () => {
                 "cell": "(123) 456-789"
             },
         ]
-    await Schema.insertMany(users)
-    console.log("Seeded dummy users!")
+    await Schema.insertMany(info)
+    console.log("Seeded dummy info!")
 }
 
 const run = async () => {
