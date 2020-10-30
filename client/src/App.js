@@ -11,11 +11,15 @@ import AdminScreen from "./screens/admin/AdminScreen"
 function App() {
   return (
     <div className="App">
+    <Nav />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/disclaimer' component={DisclaimerScreen} />
         <Route path="/request-ballot" component={RequestBallotScreen} />
         <Route path="/admin" component={AdminScreen} />
+        
+        <Route exact path='/' component={Home}/>
+        <Route path="/request-ballot" component = {RequestBallotScreen}/>
       </Switch>
     </div>
   );
