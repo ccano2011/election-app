@@ -1,23 +1,36 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './Nav.css';
+import Burger from 'react-css-burger';
 
-const Nav = () => {
 
-    function hamburgerAnimation(e) {
-        e.classList.toggle("spin");
-      }
 
+
+class Nav extends Component {
+    
+    state = {
+        active: false,
+    };
+
+    render() {
     return(
         <nav>
             <div className='header'>
-                <div class="container" onclick={hamburgerAnimation}>
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
+                <div className='burger'>
+                    <Burger
+                    onClick={() => this.setState({ active: !this.state.active })}
+                    active={this.state.active}
+                    burger="slider"
+                    color="white"
+                    hoverOpacity={0.8}
+                    scale={1}
+                    />
+                </div>
+                <div className='BallotIcon'>
                 </div>
             </div>
         </nav>
     )
+}
 }
 
 export default Nav

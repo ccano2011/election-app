@@ -11,33 +11,15 @@ nav {
     display: flex;
     padding: 20px 0;
     max-width: 100%;
-    height: 50px;
+    height: 60px;
 }
 
-.container {
-    display: inline-block;
-    cursor: pointer;
+.burger {
+    margin: -10px;
 }
-  
-.bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    margin: 6px 0;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-  
-.spin .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-405deg) translate(-9px, 6px);
-}
-  
-.spin .bar2 {opacity: 0;}
-  
-.spin .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-5px, -6px);
+
+.ballotIcon {
+    color: white;
 }
 
   
