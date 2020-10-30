@@ -29,6 +29,12 @@ const Home = () => {
         <AbsenteeButton />
         
         <CalendarButton/>
+        {/* <div>
+          <a className='link' href="https://vote.nyc/" target='_blanck'>
+            Important Dates
+          <img src={Calendar} alt='Calendar Img' />
+          </a>
+       </div> */}
       </div>
     </div>
   
