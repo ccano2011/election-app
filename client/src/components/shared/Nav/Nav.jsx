@@ -5,6 +5,7 @@ import BallotImg from '../../../Assets/ballot.svg';
 import LogoImg from '../../../Assets/logo.png';
 import { NavLink } from 'react-router-dom';
 
+
 class Nav extends Component {
     constructor(){
         super()
