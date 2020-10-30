@@ -1,16 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+.ballotRequest{
+  font-family: 'Dosis', sans-serif;
+}
+.ballot-header{
+  padding-top: 80px;
+}
 .ballot-form{
   display: flex;
   flex-direction: column;
+  text-align: left;
+  align-items: center;
+
+}
+input{
+  border-radius: 7px;
+  border-color: grey;
+  margin: 5px;
+  width: 200px;
+  height: 20px;
+}
+label{
+  font-size: 14px;
+}
+.street, .apt, .cit, .stat, .zip {
+  color: rgb(97, 92, 92);
 }
 
-.confirm-button, .cancel-button{
-  font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 40px;
-  margin-top: 40px;
+.reg-question{
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  width: 10%;
+  text-align: match-parent;
+  margin: 0 auto;
+}
+
+.dob{
+  text-align: match-parent;
+}
+.day, .month{
+  border-radius: 0px;
+  background-color: rgb(219, 212, 212);
   border: none;
-  box-shadow: 2px 2px 10px 2px #cecece;
+  padding: 2px;
+  margin: 3.4px;
+  height: 30px;
+  width: 27px;
+}
+.year{
+  border-radius: 0px;
+  background-color: rgb(219, 212, 212);
+  border: none;
+  padding: 2px;
+  margin: 3.4px;
+  height: 30px;
+  width: 55px;
+}
+.first, .last{
+  font-weight: bolder;
+  padding: 3px;
+}
+
+.confirm-button{
+  font-size: 13px;
+  height: 40px;
+  margin-top: 20px;
   cursor: pointer;
   width: 10%;
   align-self: center;
+  border-radius: 18px;
+  font-weight: bold;
+  background-color: white;
+
+}
+button:hover{
+  background-color:#D6DDF3;
+}
+.em, .cellPhone{
+  font-weight: bold;
+}
+.cancel-button{
+  font-size: 11px;
+  height: 30px;
+  margin-top: 10px;
+  width: 8%;
+  border-radius: 14px;
+  font-weight: bold;
+  background-color: white;
+}
+.cancel-button a{
+  text-decoration: none;
+  color: black;
 }

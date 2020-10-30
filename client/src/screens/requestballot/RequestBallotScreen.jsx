@@ -38,15 +38,15 @@ const RequestBallotScreen = () => {
   } 
  
   return (
-    <div>
+    <div className = "ballotRequest">
       <Nav /> 
-      <br/><br/><br/><br/>
+      
       <div className= "ballot-header">
-        <h1>Request an Absentee Ballot</h1>
+        <h4>Request an Absentee Ballot</h4>
       </div>
       <div className = "ballot-container">
       <form className="ballot-form" onSubmit = {handleSubmit}>
-          <label>
+          <label className="first">
             
                 First Name <br/>
                 <input
@@ -56,9 +56,9 @@ const RequestBallotScreen = () => {
                     required
                     onChange={handleChange}
                  />
-        </label>  
+          </label>  
+          <label className="last">
               Last Name <br/>
-                <label>
                 <input
                     className="lastName"
                     value={ballot.lastName}
@@ -68,8 +68,8 @@ const RequestBallotScreen = () => {
           />
           </label>
           <br/>
-        <p className = "reg-question">Where are you registered to vote?</p>
-        <label>
+        <h4 className = "reg-question">Where are you registered to vote?</h4>
+        <label className = "street">
           Street Address <br/>
                 <input
                     className="address"
@@ -79,7 +79,7 @@ const RequestBallotScreen = () => {
                     onChange={handleChange}
           />
         </label>
-        <label>
+        <label className = "apt">
           Apartment/Suite <br/>
                 <input
                     className="aptSuite"
@@ -88,7 +88,7 @@ const RequestBallotScreen = () => {
                     onChange={handleChange}
           />
         </label>
-        <label>
+        <label className = "cit">
           City <br/>
                 <input
                     className="city"
@@ -98,7 +98,7 @@ const RequestBallotScreen = () => {
                     onChange={handleChange}
           />
         </label>
-        <label>
+        <label className = "stat">
           State <br/>
                 <input
                     className="state"
@@ -108,7 +108,7 @@ const RequestBallotScreen = () => {
                     onChange={handleChange}
           />
         </label>
-        <label>
+        <label className = "zip">
           Zip Code <br/>
                 <input
                     className="zipCode"
@@ -117,7 +117,8 @@ const RequestBallotScreen = () => {
                     required
                     onChange={handleChange}
           />
-        </label> <br/>
+          </label> <br />
+          <div className = "dob">
           <label>
             Date of Birth <br/>
              <input
@@ -138,9 +139,10 @@ const RequestBallotScreen = () => {
               name="year"
               onChange = {handleChange}
             />
-        </label>
+            </label>
+            </div>
           <br/>
-        <label>
+        <label className = 'em'>
           Email Address <br/>
                 <input
                     className="email"
@@ -149,7 +151,7 @@ const RequestBallotScreen = () => {
                     onChange={handleChange}
           />
         </label>
-        <label>
+        <label className = "cellPhone">
           Cell phone Number <br/>
                 <input
                     className="cell"
