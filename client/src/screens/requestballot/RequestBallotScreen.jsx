@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './RequestBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
-import { Link } from "react-router-dom"
+import {Link, Redirect} from "react-router-dom"
+
 
 const RequestBallotScreen = () => {
 
@@ -35,7 +36,10 @@ const RequestBallotScreen = () => {
       ...ballot,
       [name]: value
     })
-  }
+  } 
+  if (isCreated) {
+    return <Redirect to={`/request-confirmed`} />
+}
 
   return (
     <div className="ballotRequest">
