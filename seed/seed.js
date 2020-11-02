@@ -15,7 +15,9 @@ const main = async () => {
                 "city": "New York",
                 "state": "New York",
                 "zipCode": "10007",
-                "dob": "01/01/1970",
+                "day": "01",
+                "month": "01",
+                "year": "1970",
                 "email": "YahooHotmail@aol.com",
                 "cell": "(123) 456-789"
             },
