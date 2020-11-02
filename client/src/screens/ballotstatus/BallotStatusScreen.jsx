@@ -26,7 +26,7 @@ function BallotStatusScreen(props) {
       </div>
       <div className='text-status'>
           <p className='vote-date'>
-            <span>Your vote is set to be processed and counted by </span>
+            <span>Your vote is set to be processed and counted by  </span>
             <span style={{fontWeight: "bold"}}>November 3rd, 2020</span>
          </p>
           
