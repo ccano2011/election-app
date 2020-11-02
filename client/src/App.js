@@ -5,6 +5,7 @@ import Nav from './components/shared/Nav/Nav'
 import RequestBallotScreen from "./screens/requestballot/RequestBallotScreen"
 import { Route, Switch } from "react-router-dom"
 import DisclaimerScreen from "./screens/disclaimer/DisclaimerScreen";
+import RequestConfirmed from "./screens/requestconfirmed/RequestConfirmedScreen"
 import AdminScreen from "./screens/admin/AdminScreen"
 
 
