@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './RequestBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
-import {Link} from "react-router-dom"
+import {Link, Redirect} from "react-router-dom"
+
 
 const RequestBallotScreen = () => {
 
@@ -18,7 +19,7 @@ const RequestBallotScreen = () => {
     month: '',
     year: '',
     email: '',
-    cell:''
+    cell: ''
   })
 
   const [isCreated, setCreated] = useState(false)
@@ -26,7 +27,7 @@ const RequestBallotScreen = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const created = await createRequest(ballot)
-    setCreated({created})
+    setCreated({ created })
   }
 
   const handleChange = (event) => {
@@ -36,135 +37,138 @@ const RequestBallotScreen = () => {
       [name]: value
     })
   } 
- 
+  if (isCreated) {
+    return <Redirect to={`/request-confirmed`} />
+}
+
   return (
-    <div className = "ballotRequest">
-      <Nav /> 
-      
-      <div className= "ballot-header">
+    <div className="ballotRequest">
+      <Nav />
+
+      <div className="ballot-header">
         <h4>Request an Absentee Ballot</h4>
       </div>
-      <div className = "ballot-container">
-      <form className="ballot-form" onSubmit = {handleSubmit}>
+      <div className="ballot-container">
+        <form className="ballot-form" onSubmit={handleSubmit}>
           <label className="first">
-            
-                First Name <br/>
-                <input
-                    className="firstName"
-                    value={ballot.firstName}
-                    name='firstName'
-                    required
-                    onChange={handleChange}
-                 />
-          </label>  
+
+            First Name <br />
+            <input
+              className="firstName"
+              value={ballot.firstName}
+              name='firstName'
+              required
+              onChange={handleChange}
+            />
+          </label>
           <label className="last">
-              Last Name <br/>
-                <input
-                    className="lastName"
-                    value={ballot.lastName}
-                    name='lastName'
-                    required
-                    onChange={handleChange}
-          />
+            Last Name <br />
+            <input
+              className="lastName"
+              value={ballot.lastName}
+              name='lastName'
+              required
+              onChange={handleChange}
+            />
           </label>
-          <br/>
-        <h4 className = "reg-question">Where are you registered to vote?</h4>
-        <label className = "street">
-          Street Address <br/>
-                <input
-                    className="address"
-                    value={ballot.streetAddress}
-                    name='streetAddress'
-                    required
-                    onChange={handleChange}
-          />
-        </label>
-        <label className = "apt">
-          Apartment/Suite <br/>
-                <input
-                    className="aptSuite"
-                    value={ballot.apartmentSuite}
-                    name='author'
-                    onChange={handleChange}
-          />
-        </label>
-        <label className = "cit">
-          City <br/>
-                <input
-                    className="city"
-                    value={ballot.city}
-                    name='city'
-                    required
-                    onChange={handleChange}
-          />
-        </label>
-        <label className = "stat">
-          State <br/>
-                <input
-                    className="state"
-                    value={ballot.state}
-                    name='state'
-                    required
-                    onChange={handleChange}
-          />
-        </label>
-        <label className = "zip">
-          Zip Code <br/>
-                <input
-                    className="zipCode"
-                    value={ballot.zipCode}
-                    name='zipCode'
-                    required
-                    onChange={handleChange}
-          />
+          <br />
+          <h4 className="reg-question">Where are you registered to vote?</h4>
+          <label className="street">
+            Street Address <br />
+            <input
+              className="address"
+              value={ballot.streetAddress}
+              name='streetAddress'
+              required
+              onChange={handleChange}
+            />
+          </label>
+          <label className="apt">
+            Apartment/Suite <br />
+            <input
+              className="aptSuite"
+              value={ballot.apartmentSuite}
+              name='author'
+              onChange={handleChange}
+            />
+          </label>
+          <label className="cit">
+            City <br />
+            <input
+              className="city"
+              value={ballot.city}
+              name='city'
+              required
+              onChange={handleChange}
+            />
+          </label>
+          <label className="stat">
+            State <br />
+            <input
+              className="state"
+              value={ballot.state}
+              name='state'
+              required
+              onChange={handleChange}
+            />
+          </label>
+          <label className="zip">
+            Zip Code <br />
+            <input
+              className="zipCode"
+              value={ballot.zipCode}
+              name='zipCode'
+              required
+              onChange={handleChange}
+            />
           </label> <br />
-          <div className = "dob">
-          <label>
-            Date of Birth <br/>
-             <input
-              className="day"
-              value={ballot.day}
-              name="day"
-              onChange = {handleChange}
-            />
-            <input
-              className="month"
-              value={ballot.month}
-              name="month"
-              onChange = {handleChange}
-            />
-            <input
-              className="year"
-              value={ballot.year}
-              name="year"
-              onChange = {handleChange}
-            />
+          <div className="dob">
+            <label>
+              Date of Birth <br />
+              <input
+                className="day"
+                value={ballot.day}
+                name="day"
+                onChange={handleChange}
+              />
+              <input
+                className="month"
+                value={ballot.month}
+                name="month"
+                onChange={handleChange}
+              />
+              <input
+                className="year"
+                value={ballot.year}
+                name="year"
+                onChange={handleChange}
+              />
             </label>
-            </div>
-          <br/>
-        <label className = 'em'>
-          Email Address <br/>
-                <input
-                    className="email"
-                    value={ballot.email}
-                    name='email'
-                    onChange={handleChange}
-          />
-        </label>
-        <label className = "cellPhone">
-          Cell phone Number <br/>
-                <input
-                    className="cell"
-                    value={ballot.cell}
-                    name='cell'
-                    onChange={handleChange}
-          />
+          </div>
+          <br />
+          <label className='em'>
+            Email Address <br />
+            <input
+              className="email"
+              value={ballot.email}
+              name='email'
+              onChange={handleChange}
+            />
           </label>
-        <button type='submit' className="confirm-button">Confirm</button>
-        <button className = 'cancel-button'><Link to="/">Cancel</Link></button>
+          <label className="cellPhone">
+            Cell phone Number <br />
+            <input
+              className="cell"
+              value={ballot.cell}
+              name='cell'
+              onChange={handleChange}
+            />
+          </label>
+          <button type='submit' className="confirm-button">Confirm</button>
+          <Link to="/" className='cancel-button'><button className='cancel-button'>Cancel</button></Link>
         </form>
-        </div>
+      </div>
     </div>
-)
+  )
 }
 export default RequestBallotScreen
