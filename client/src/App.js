@@ -17,7 +17,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/status' component={BallotStatusScreen}/>
+        <Route path='/status' component={BallotStatusScreen} />
         <Route path='/disclaimer' component={DisclaimerScreen} />
         <Route path="/request-ballot" component={RequestBallotScreen} />
         <Route path="/admin" component={AdminScreen} />

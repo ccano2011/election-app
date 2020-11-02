@@ -4,8 +4,8 @@ import Ribbon from '../../Assets/ribbon.png';
 import ArrowImg from '../../Assets/left-arrow.svg';
 import { Link } from "react-router-dom";
 
-
-const RequestConfirmedScreen = () => {
+const RequestConfirmedScreen = (props) => {
+  // const [post, setPost] = useState(null)
 
   return (
     <div className="ballot-screen">
