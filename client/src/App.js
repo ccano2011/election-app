@@ -21,8 +21,8 @@ function App() {
         <Route path='/disclaimer' component={DisclaimerScreen} />
         <Route path="/request-ballot" component={RequestBallotScreen} />
         <Route path="/admin" component={AdminScreen} />
-        <Route path="/request-confirmed" component={RequestConfirmed} />
-        {/* <Route path="/edit-ballot" component={EditBallotScreen} /> */}
+        <Route path="/edit-ballot" component={EditBallotScreen} />
+        <Route path = "/request-confirmed" component = {RequestConfirmed}/>
       </Switch>
     </div>
   );
