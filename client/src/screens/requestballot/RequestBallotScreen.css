@@ -1,18 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
+.arrow {
+  float: left;
+  margin-left: 15px;
+  padding-top: 1px;
+  cursor: pointer;
+}
+
 .ballotRequest{
   font-family: 'Dosis', sans-serif;
 }
-.ballot-header{
-  padding-top: 80px;
+.ballot-container{
+  margin-top: 40px;
 }
 .ballot-form{
   display: flex;
   flex-direction: column;
   text-align: left;
   align-items: center;
-
 }
+.headline {
+  padding-top: 3px;
+  padding-right: 15px;
+}
+
+.subHeader {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  background-color: #AEBCE6;
+  background-image: linear-gradient(#dddfe6, #AEBCE6);
+  margin-top: 100px;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+}
+
 input{
   border-radius: 7px;
   border-color: grey;

@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import './RequestBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
-import {Link, Redirect} from "react-router-dom"
+import {Link, Redirect} from "react-router-dom";
+import ArrowImg from '../../Assets/left-arrow.svg';
+
 
 
 const RequestBallotScreen = () => {
@@ -42,11 +44,14 @@ const RequestBallotScreen = () => {
 }
 
   return (
+    
     <div className="ballotRequest">
       <Nav />
-
-      <div className="ballot-header">
-        <h4>Request an Absentee Ballot</h4>
+      <div className='subHeader'>
+        <Link to='./disclaimer'>
+            <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25'/>
+        </Link>
+        <p className="headline">Request and Absentee Ballot</p>
       </div>
       <div className="ballot-container">
         <form className="ballot-form" onSubmit={handleSubmit}>
@@ -88,7 +93,7 @@ const RequestBallotScreen = () => {
             <input
               className="aptSuite"
               value={ballot.apartmentSuite}
-              name='author'
+              name='apartmentSuite'
               onChange={handleChange}
             />
           </label>

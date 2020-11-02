@@ -24,7 +24,7 @@ class Nav extends Component {
 
             <ul className='hamburgerDropDown'>
                 <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black'}} to='/' >Home</NavLink></li>
-                <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
+                <li className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
                 <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/'>Admin Only</NavLink></li>
             </ul>
         )
@@ -52,10 +52,9 @@ class Nav extends Component {
         <nav>
             <div className='header'>
                 <div className='burger'>
-                { this.state.open ?  this.displayMenu() : false}
+                { this.state.open ?  this.displayMenu() : null}
                 { window.innerWidth > 0 ? this.displayHamburgerMenu(): null }
                 </div>
-                
                 <NavLink className='link' to='/'>
                     <div className='logo-div'>
                         <img className='logo' src={LogoImg} alt='logo' height='65' weight='65'/>
@@ -66,7 +65,6 @@ class Nav extends Component {
                         <img className='svg' src={BallotImg} alt='ballot' />
                     </div>
                 </NavLink>
-                
             </div>
         </nav>
         </div>
