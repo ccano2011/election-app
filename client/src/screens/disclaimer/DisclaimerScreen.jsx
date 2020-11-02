@@ -1,6 +1,7 @@
 import React from 'react';
 import './DisclaimerScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
+import ArrowImg from '../../Assets/left-arrow.svg';
 import { Link } from "react-router-dom"
 
 
@@ -8,6 +9,12 @@ function DisclaimerScreen() {
     return (
         <div>
             <Nav />
+            <div className='subHeader'>
+                <Link to='/'>
+                    <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25'/>
+                </Link>
+               <p className="headline">Request and Absentee Ballot</p>
+            </div>
             <div className="disclaimer">
                 <h3>To qualify for absentee ballot you must be: </h3>
                     <ul className="disclaimerUl">
