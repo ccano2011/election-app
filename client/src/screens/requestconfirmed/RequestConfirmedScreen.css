@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
-.ballot-screen{
-font-family: 'Dosis', sans-serif;
-position: fixed;
-background-image: url('../../Assets/RegistrationConfirmationBackground.png');
-/* left: 50%; */
-/* top: 50%; */
-z-index: -1;
-background-size: cover;
-height: 100%;
-width: 100%;
-/* transform: translate(-50%, -50%); */
-background-repeat: no-repeat;
+.arrow {
+  float: left;
+  margin-left: 15px;
+  padding-top: 1px;
+  cursor: pointer;
 }
+
+.ballot-screen{
+  font-family: 'Dosis', sans-serif;
+  position: fixed;
+  background-image: url('../../Assets/RegistrationConfirmationBackground.png');
+  z-index: -1;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
 .confirm-container{
   margin: auto;
   width: 220px;
@@ -23,12 +28,12 @@ background-repeat: no-repeat;
   border-radius: 12px;
   border-color: black;
   border-style: solid;
-
 }
 
 .ribbon{
   width: 45%;
 }
+
 .home-button{
   text-align: match-parent;
   font-size: 13px;
@@ -45,6 +50,22 @@ background-repeat: no-repeat;
 .home-button a{
   text-decoration: none;
   color: black;
+}
+
+.headline {
+  padding-top: 3px;
+  padding-right: 15px;
+}
+
+.subHeader {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  background-color: #AEBCE6;
+  background-image: linear-gradient(#dddfe6, #AEBCE6);
+  margin-top: 100px;
+  height: 30px;
+  width: 100%;
+  text-align: center;
 }
 
 /* Media query for large devices (laptops/desktops) */
