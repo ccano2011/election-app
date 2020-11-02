@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     width: '250px',
     textTransform: 'none',
     border: '1px solid black',
+    '&:hover': {
+      backgroundColor: '#092266',
+  }
   },
 }));
 

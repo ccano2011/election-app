@@ -1,0 +1,30 @@
+.status {
+  display: flex;
+  margin-top: 10vh;
+  flex-direction: column;
+}
+
+.logo-background {
+  display: flex;
+  margin-top: 5%;
+  color: black;
+  background-image: url(../../Assets/DesktopTrackYourVoteBackground.png);
+  object-fit: cover;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  height: 30vh;
+  background-size: cover;
+  background-repeat: round;
+}
+
+.text-status {
+  align-self: center;
+}
+
+.vote-date {
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 25px;
+  width: 60%;
+}
