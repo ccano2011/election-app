@@ -2,21 +2,19 @@
 
 .ballot-screen{
 font-family: 'Dosis', sans-serif;
-background-image: url(../../Assets/RegistrationConfirmationBackground.png);
-display: flex;
-flex-direction: column;
-align-items: center;
 position: fixed;
-width: 100%;
-left: 50%;
-top: 50%;
-height: 100%;
-object-fit: cover;
-transform: translate(-50%, -50%);
+background-image: url('../../Assets/RegistrationConfirmationBackground.png');
+/* left: 50%; */
+/* top: 50%; */
 z-index: -1;
-background-repeat: round;
+background-size: cover;
+height: 100%;
+width: 100%;
+/* transform: translate(-50%, -50%); */
+background-repeat: no-repeat;
 }
 .confirm-container{
+  margin: auto;
   width: 220px;
   height: 260px;
   margin-top: 200px;
@@ -36,7 +34,6 @@ background-repeat: round;
   font-size: 13px;
   height: 40px;
   margin-top: 80px;
-  float: left;
   cursor: pointer;
   width: 230px;
   border-radius: 18px;
@@ -48,4 +45,11 @@ background-repeat: round;
 .home-button a{
   text-decoration: none;
   color: black;
+}
+
+/* Media query for large devices (laptops/desktops) */
+@media screen and (min-width: 900px){
+  .ballot-screen{
+    background-image: url('../../Assets/DesktopBallotRequestSubmitted.png')
+  }
 }

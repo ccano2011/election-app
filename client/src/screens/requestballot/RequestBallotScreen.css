@@ -63,16 +63,16 @@ label{
 }
 
 .confirm-button{
-  font-size: 13px;
+text-align: match-parent;
+font-size: 13px;
   height: 40px;
   margin-top: 20px;
+  float: left;
   cursor: pointer;
-  width: 10%;
-  align-self: center;
+  width: 230px;
   border-radius: 18px;
   font-weight: bold;
   background-color: white;
-
 }
 button:hover{
   background-color:#D6DDF3;
@@ -84,10 +84,13 @@ button:hover{
   font-size: 11px;
   height: 30px;
   margin-top: 10px;
-  width: 8%;
+  width: 180px;
   border-radius: 14px;
   font-weight: bold;
   background-color: white;
+  text-align: match-parent;
+  float: left;
+  cursor: pointer;
 }
 .cancel-button a{
   text-decoration: none;

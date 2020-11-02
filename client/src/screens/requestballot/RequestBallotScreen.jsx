@@ -164,7 +164,7 @@ const RequestBallotScreen = () => {
               onChange={handleChange}
             />
           </label>
-          <button type='submit' className="confirm-button">Confirm</button>
+         <Link to ="/request-confirmed"> <button type='submit' className="confirm-button">Confirm</button></Link>
           <Link to="/" className='cancel-button'><button className='cancel-button'>Cancel</button></Link>
         </form>
       </div>
