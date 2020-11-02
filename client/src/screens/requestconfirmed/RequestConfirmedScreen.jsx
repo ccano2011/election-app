@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { getRequest, updateRequest } from '../../services/ballotConnect.js'
 
 const RequestConfirmedScreen = (props) => {
-  const [post, setPost] = useState(null)
+  // const [post, setPost] = useState(null)
   return (
     <div className="ballot-screen">
       <div className="confirm-container">

@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './RequestBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
-import {Link, Redirect} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom"
+//ToggleDisplay from an npm package I found online
+import ToggleDisplay from 'react-toggle-display'
 import ArrowImg from '../../Assets/left-arrow.svg';
-
 
 
 const RequestBallotScreen = () => {
@@ -26,37 +27,35 @@ const RequestBallotScreen = () => {
 
   const [isCreated, setCreated] = useState(false)
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const created = await createRequest(ballot)
-    setCreated({ created })
-  }
-
   const handleChange = (event) => {
     const { name, value } = event.target
     setBallot({
       ...ballot,
       [name]: value
     })
-  } 
-  if (isCreated) {
-    return <Redirect to={`/request-confirmed`} />
-}
+  }
+
+  const history = useHistory()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const created = await createRequest(ballot)
+    setCreated({ created })
+    setTimeout(() => {
+      history.push(`/request-confirmed`)
+    }, 1000)
+  }
 
   return (
-    
     <div className="ballotRequest">
       <Nav />
-      <div className='subHeader'>
-        <Link to='./disclaimer'>
-            <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25'/>
-        </Link>
-        <p className="headline">Request and Absentee Ballot</p>
+      <div className="ballot-header">
+        <h4>Request an Absentee Ballot</h4>
       </div>
+      <div><h1>Sumbitting...</h1></div>
       <div className="ballot-container">
         <form className="ballot-form" onSubmit={handleSubmit}>
           <label className="first">
-
             First Name <br />
             <input
               className="firstName"
@@ -93,7 +92,7 @@ const RequestBallotScreen = () => {
             <input
               className="aptSuite"
               value={ballot.apartmentSuite}
-              name='apartmentSuite'
+              name='author'
               onChange={handleChange}
             />
           </label>
@@ -169,7 +168,7 @@ const RequestBallotScreen = () => {
               onChange={handleChange}
             />
           </label>
-         <Link to ="/request-confirmed"> <button type='submit' className="confirm-button">Confirm</button></Link>
+          <button type='submit' className="confirm-button" >Confirm</button>
           <Link to="/" className='cancel-button'><button className='cancel-button'>Cancel</button></Link>
         </form>
       </div>
