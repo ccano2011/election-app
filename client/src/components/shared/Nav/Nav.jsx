@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './Nav.css';
-import Burger from 'react-css-burger';
 import BallotImg from '../../../Assets/ballot.svg';
 import LogoImg from '../../../Assets/logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
@@ -13,25 +12,20 @@ class Nav extends Component {
         super()
         this.state = {
             open: false,
-            hideOrShowHambugerDropDown: 'nav'
         }
     }
 
     handleClick = () => {
         this.setState({open: !this.state.open});
     }
-    
-    state = {
-        active: false,
-    };
 
-    displayMobileMenu = () => {
+    displayMenu = () => {
         return (
 
             <ul className='hamburgerDropDown'>
-                <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black', fontFamily: 'comicsans' }} to='/' ><h4 className="linky">Home</h4></NavLink></li>
-                <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/'><h4>Track Your Ballot</h4></NavLink></li>
-                <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/'><h4>Admin Only</h4></NavLink></li>
+                <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black'}} to='/' >Home</NavLink></li>
+                <li className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
+                <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/'>Admin Only</NavLink></li>
             </ul>
         )
     }
@@ -46,7 +40,7 @@ class Nav extends Component {
                     strokeWidth={3}
                     rotate={0}
                     color='white'
-                    borderRadius={0}
+                    borderRadius={2}
                     animationDuration={0.3}
                 />
             )
@@ -58,10 +52,9 @@ class Nav extends Component {
         <nav>
             <div className='header'>
                 <div className='burger'>
-                { this.state.open ?  this.displayMobileMenu() : null}
-                {window.innerWidth > 1200 ? this.displayHamburgerMenu(): this.displayHamburgerMenu()}
+                { this.state.open ?  this.displayMenu() : null}
+                { window.innerWidth > 0 ? this.displayHamburgerMenu(): null }
                 </div>
-                
                 <NavLink className='link' to='/'>
                     <div className='logo-div'>
                         <img className='logo' src={LogoImg} alt='logo' height='65' weight='65'/>
@@ -72,7 +65,6 @@ class Nav extends Component {
                         <img className='svg' src={BallotImg} alt='ballot' />
                     </div>
                 </NavLink>
-                
             </div>
         </nav>
         </div>
