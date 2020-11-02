@@ -22,6 +22,7 @@ function App() {
         <Route path="/request-ballot" component={RequestBallotScreen} />
         <Route path="/admin" component={AdminScreen} />
         <Route path="/edit-ballot" component={EditBallotScreen} />
+        <Route path='/request-confirmed' component={RequestConfirmed} />
       </Switch>
     </div>
   );

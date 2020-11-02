@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+.arrow {
+    float: left;
+    margin-left: 15px;
+    padding-top: 1px;
+    cursor: pointer;
+}
+
 .status {
   display: flex;
   margin-top: 10vh;
@@ -27,4 +36,20 @@
   border: 1px solid red;
   border-radius: 25px;
   width: 60%;
+}
+
+.headline {
+    padding-top: 3px;
+    padding-right: 45px;
+}
+
+.subHeader {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    background-color: #AEBCE6;
+    background-image: linear-gradient(#dddfe6, #AEBCE6);
+    margin-top: 100px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
 }
