@@ -23,6 +23,8 @@ const Home = () => {
         <AbsenteeButton />
 
         <CalendarButton />
+
+        <Link to="/admin">admin test link</Link>
       </div>
     </div>
   );
