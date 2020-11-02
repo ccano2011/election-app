@@ -6,7 +6,6 @@ import {Link, Redirect} from "react-router-dom";
 import ArrowImg from '../../Assets/left-arrow.svg';
 
 
-
 const RequestBallotScreen = () => {
 
   const [ballot, setBallot] = useState({

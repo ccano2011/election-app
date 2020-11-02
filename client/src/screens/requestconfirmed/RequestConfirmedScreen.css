@@ -8,14 +8,14 @@
 }
 
 .ballot-screen{
-  font-family: 'Dosis', sans-serif;
-  position: fixed;
-  background-image: url('../../Assets/RegistrationConfirmationBackground.png');
-  z-index: -1;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
+font-family: 'Dosis', sans-serif;
+position: fixed;
+background-image: url('../../Assets/RegistrationConfirmationBackground.png');
+z-index: -1;
+background-size: cover;
+height: 100%;
+width: 100%;
+background-repeat: no-repeat;
 }
 
 .confirm-container{
@@ -44,7 +44,6 @@
   border-radius: 18px;
   font-weight: bold;
   background-color: white;
-
 }
 
 .home-button a{

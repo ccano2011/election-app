@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './BallotStatusScreen.css'
 import Nav from "../../components/shared/Nav/Nav";
 import { getRequests} from '../../services/ballotConnect';
+import Lilguy from "../../Assets/lilguy.png"
+import TrackingBar from "../../components/trackingbar/TrackingBar"
 import ArrowImg from '../../Assets/left-arrow.svg';
 import { Link } from "react-router-dom"
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+
 
 function BallotStatusScreen(props) {
  
@@ -21,8 +24,11 @@ function BallotStatusScreen(props) {
         </div>
       </div>
       <div className='status'>
-      <div className='logo-background'>
-        <h1>LOADING BAR</h1>
+        <div className='logo-background'>
+          <div className = "progress-bar">
+            {/* <img src={Lilguy} className="lilguy" alt="lilguy" /> */}
+            {/* <TrackingBar/> */}
+          </div>
       </div>
       <div className='text-status'>
           <p className='vote-date'>
