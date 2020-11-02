@@ -4,13 +4,10 @@
 font-family: 'Dosis', sans-serif;
 position: fixed;
 background-image: url('../../Assets/RegistrationConfirmationBackground.png');
-/* left: 50%; */
-/* top: 50%; */
 z-index: -1;
 background-size: cover;
 height: 100%;
 width: 100%;
-/* transform: translate(-50%, -50%); */
 background-repeat: no-repeat;
 }
 .confirm-container{

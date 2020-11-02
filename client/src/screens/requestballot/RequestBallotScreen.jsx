@@ -4,7 +4,6 @@ import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
 import {Link, Redirect} from "react-router-dom"
 
-
 const RequestBallotScreen = () => {
 
   const [ballot, setBallot] = useState({
