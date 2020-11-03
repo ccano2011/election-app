@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getRequests, deleteRequest } from '../../services/ballotConnect';
+import { Link } from "react-router-dom"
+import "./AdminScreen.css"
 
 function AdminScreen(props) {
     const [ballotReq, setBallotReq] = useState([]);
@@ -45,6 +47,7 @@ function AdminScreen(props) {
                             <p>{post.email}</p>
                             <p>{post.cell}</p>
                             <button onClick={() => handleDelete(post._id)}> Delete Ballot Request</button>
+                            <Link to={`/edit-ballot/${post._id}`}><button>Edit this ballot</button></Link>
                         </div>)
                     )}
             </div>
