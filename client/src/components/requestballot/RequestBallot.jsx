@@ -9,7 +9,7 @@ const Requests = (props) => {
             <div className="streetAddress">{props.streetAddress}</div>
             <div className="apartmentSuite">{props.apartmentSuite}</div>
             <div className="city">{props.city}</div>
-            <div className="state">{props.state}</div>
+            <div className="county">{props.county}</div>
             <div className="zipCode">{props.zipCode}</div>
             <div className="day">{props.day}</div>
             <div className="month">{props.month}</div>

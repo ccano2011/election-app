@@ -113,11 +113,11 @@ const RequestBallotScreen = () => {
             />
           </label>
           <label className="stat">
-            State <br />
+            County <br />
             <input
-              className="state"
-              value={ballot.state}
-              name='state'
+              className="county"
+              value={ballot.county}
+              name='county'
               required
               onChange={handleChange}
             />

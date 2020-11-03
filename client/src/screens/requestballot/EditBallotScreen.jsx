@@ -119,11 +119,11 @@ const EditBallotScreen = (props) => {
                         />
                     </label>
                     <label className="stat">
-                        State <br />
+                        County <br />
                         <input
-                            className="state"
-                            value={ballot.state}
-                            name='state'
+                            className="county"
+                            value={ballot.county}
+                            name='county'
                             required
                             onChange={handleChange}
                         />
@@ -172,7 +172,7 @@ const EditBallotScreen = (props) => {
                         />
                     </label>
                     <label className="cellPhone">
-                        Cell phone Number <br />
+                        Cell Phone Number <br />
                         <input
                             className="cell"
                             value={ballot.cell}
