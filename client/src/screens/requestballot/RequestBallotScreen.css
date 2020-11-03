@@ -20,6 +20,7 @@
   flex-direction: column;
   text-align: left;
   align-items: center;
+  margin-bottom: 50px;
 }
 .headline {
   padding-top: 3px;
