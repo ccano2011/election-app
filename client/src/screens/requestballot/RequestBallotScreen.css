@@ -9,6 +9,8 @@
 
 .ballotRequest{
   font-family: 'Dosis', sans-serif;
+  margin-top: 100px;
+
 }
 .ballot-container{
   margin-top: 40px;
@@ -44,22 +46,23 @@ input{
 }
 label{
   font-size: 14px;
+  font-weight: bolder;
 }
-.street, .apt, .cit, .stat, .zip {
+/* .street, .apt, .cit, .stat, .zip {
   color: rgb(97, 92, 92);
-}
+} */
 
 .reg-question{
   display: flex;
   flex-wrap: wrap;
   font-weight: bold;
-  width: 10%;
+  /* width: 10%; */
   text-align: match-parent;
-  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .dob{
-  text-align: match-parent;
+  text-align: center;
 }
 .day, .month{
   border-radius: 0px;
@@ -68,7 +71,8 @@ label{
   padding: 2px;
   margin: 3.4px;
   height: 30px;
-  width: 27px;
+  width: 40px;
+  text-align: center;
 }
 .year{
   border-radius: 0px;
@@ -78,6 +82,7 @@ label{
   margin: 3.4px;
   height: 30px;
   width: 55px;
+  text-align: center;
 }
 .first, .last{
   font-weight: bolder;

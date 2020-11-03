@@ -49,10 +49,16 @@ const RequestBallotScreen = () => {
   return (
     <div className="ballotRequest">
       <Nav />
-      <div className="ballot-header">
-        <h4>Request an Absentee Ballot</h4>
+      <div className='subHeader'>
+        <Link to='/'>
+          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+        </Link>
+        <p className="headline">Request an Absentee Ballot</p>
       </div>
-      <div><h1>Sumbitting...</h1></div>
+      <div className="ballot-header">
+        {/* <h4>Request an Absentee Ballot</h4> */}
+      </div>
+      {/* <div><h1>Sumbitting...</h1></div> */}
       <div className="ballot-container">
         <form className="ballot-form" onSubmit={handleSubmit}>
           <label className="first">
@@ -128,23 +134,26 @@ const RequestBallotScreen = () => {
           </label> <br />
           <div className="dob">
             <label>
-              Date of Birth <br />
-              <input
-                className="day"
-                value={ballot.day}
-                name="day"
-                onChange={handleChange}
-              />
+              Date of Birth<br />
               <input
                 className="month"
                 value={ballot.month}
                 name="month"
+                placeholder="MM"
+                onChange={handleChange}
+              />
+              <input
+                className="day"
+                value={ballot.day}
+                name="day"
+                placeholder="DD"
                 onChange={handleChange}
               />
               <input
                 className="year"
                 value={ballot.year}
                 name="year"
+                placeholder="Year"
                 onChange={handleChange}
               />
             </label>

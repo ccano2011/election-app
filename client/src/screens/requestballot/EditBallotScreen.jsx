@@ -56,8 +56,14 @@ const EditBallotScreen = (props) => {
     return (
         <div className="ballotRequest">
             <Nav />
+            <div className='subHeader'>
+                <Link to='/'>
+                    <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+                </Link>
+                <p className="headline">Edit Your Ballot Request</p>
+            </div>
             <div className="ballot-header">
-                <h4>Edit your Request</h4>
+                <h4>Edit your Request Form</h4>
             </div>
             <div className="ballot-container">
                 <form className="ballot-form" onSubmit={handleSubmit}>

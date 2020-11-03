@@ -11,10 +11,10 @@ const RequestConfirmedScreen = (props) => {
   return (
     <div className="ballot-screen">
       <div className='subHeader'>
-        <Link to='/request-ballot'>
+        {/* <Link to='/request-ballot'>
           <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
-        </Link>
-        <p className="headline">Request and Absentee Ballot</p>
+        </Link> */}
+        <p className="headline">Request Confirmed</p>
       </div>
       <div className="confirm-container">
         <img src={Ribbon} className="ribbon" alt="ribbon" />
