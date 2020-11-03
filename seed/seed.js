@@ -13,7 +13,7 @@ const main = async () => {
                 "streetAddress": "1 Murray Street",
                 "apartmentSuite": "#101",
                 "city": "New York",
-                "state": "New York",
+                "county": "New York County",
                 "zipCode": "10007",
                 "day": "01",
                 "month": "01",
