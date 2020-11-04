@@ -76,3 +76,12 @@
 .ballot-text {
   padding-left: 20px;
 }
+
+.lilguy{
+  width: 100px;
+  height: 100px;
+}
+
+.progress-bar{
+  margin: 0 auto;
+}

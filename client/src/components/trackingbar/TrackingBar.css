@@ -1,14 +1,28 @@
-.progress-bar{
+.progress-div {
+  background-color: transparent;
+  border-radius: .5rem;
+  width: 400px;
   position: relative;
   height: 20px;
-  width: 350px;
-  border-radius: 50px;
-  border: 1px solid #333;
+  border: 1px solid black;
+  margin: 0 auto;
+
 }
+
+.progress {
+  background-color: #CB3135;
+  height: 20px;
+  border-radius: 1rem;
+  transition: 1s ease;
+  transition-delay: 0.5s;
+  max-width: 400px;
+}
+
+/* 
 
 .filler{
   background: #CB3135;
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
-}
+} */
