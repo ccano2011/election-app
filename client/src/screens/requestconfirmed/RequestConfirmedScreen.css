@@ -48,6 +48,20 @@ background-repeat: no-repeat;
   border: 1px solid black;
 }
 
+.edit-button {
+  text-align: match-parent;
+  font-size: 13px;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 230px;
+  border-radius: 18px;
+  font-weight: bold;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+
 .home-button a{
   text-decoration: none;
   color: black;

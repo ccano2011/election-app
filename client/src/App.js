@@ -9,7 +9,7 @@ import RequestConfirmed from "./screens/requestconfirmed/RequestConfirmedScreen"
 import AdminScreen from "./screens/admin/AdminScreen"
 import EditBallotScreen from "./screens/requestballot/EditBallotScreen"
 import BallotStatusScreen from "./screens/ballotstatus/BallotStatusScreen";
-import ProgressBar from "./components/trackingbar/TrackingBar"
+import ProgressBar from "./components/trackingbar/TrackingBar";
 
 class App extends React.Component {
 
@@ -20,7 +20,7 @@ class App extends React.Component {
     this.setState({ [field]: val });
   };
   render() {
-  
+
     return (
       <div className="App">
         <Nav />
@@ -36,8 +36,8 @@ class App extends React.Component {
         <div className="div">
           {/* <ProgressBar width={400} percent={this.state.percent} />
           <button onClick={() =>
-              this.updateProgress("percent", this.state.percent + 0.2)
-            }
+            this.updateProgress("percent", this.state.percent + 0.2)
+          }
           >
             More Progress
           </button> */}
