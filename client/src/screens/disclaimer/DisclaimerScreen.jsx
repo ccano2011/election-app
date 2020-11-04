@@ -13,7 +13,7 @@ function DisclaimerScreen() {
                 <Link to='/'>
                     <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
                 </Link>
-                <p className="headline">Request an Absentee Ballot</p>
+                <p className="headline">Let's Vote</p>
             </div>
             <div className="disclaimer">
                 <h3>To qualify for absentee ballot you must be: </h3>

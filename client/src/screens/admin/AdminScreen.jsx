@@ -32,22 +32,17 @@ function AdminScreen(props) {
             <div className="renderedData">
                 {
                     ballotReq.map((post, index) => (
-                        <div key={index}>
+                        <div className="mappedContent" key={index}>
                             {/* _id={post._id} */}
-                            <p>{post.firstName}</p>
-                            <p>{post.lastName}</p>
-                            <p>{post.streetAddress}</p>
-                            <p>{post.apartmentSuite}</p>
-                            <p>{post.city}</p>
-                            <p>{post.state}</p>
-                            <p>{post.zipCode}</p>
-                            <p>{post.day}</p>
-                            <p>{post.month}</p>
-                            <p>{post.year}</p>
-                            <p>{post.email}</p>
-                            <p>{post.cell}</p>
-                            <button onClick={() => handleDelete(post._id)}> Delete Ballot Request</button>
-                            <Link to={`/edit-ballot/${post._id}`}><button>Edit this ballot</button></Link>
+                            <p className="info">{post.firstName} {post.lastName}</p>
+                            <p className="info">{post.streetAddress}, {post.city}</p>
+                            <p className="info">{post.apartmentSuite}</p>
+                            <p className="info">{post.county}, {post.zipCode}</p>
+                            <p className="info">{post.month}/{post.day}/{post.year}</p>
+                            <p className="info">{post.email}</p>
+                            <p className="info">{post.cell}</p>
+                            <Link to={`/edit-ballot/${post._id}`}><button className="disclaimerButton">Edit this ballot</button></Link>
+                            <button className="disclaimerButton" onClick={() => handleDelete(post._id)}> Delete Ballot Request</button>
                         </div>)
                     )}
             </div>
