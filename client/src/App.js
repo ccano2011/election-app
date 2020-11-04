@@ -11,15 +11,7 @@ import EditBallotScreen from "./screens/requestballot/EditBallotScreen"
 import BallotStatusScreen from "./screens/ballotstatus/BallotStatusScreen";
 import ProgressBar from "./components/trackingbar/TrackingBar";
 
-class App extends React.Component {
-
-  state = {
-    percent: 0
-  };
-  updateProgress = (field, val) => {
-    this.setState({ [field]: val });
-  };
-  render() {
+function App () {
 
     return (
       <div className="App">
@@ -33,18 +25,8 @@ class App extends React.Component {
           <Route path="/edit-ballot/:id" component={EditBallotScreen} />
           <Route path="/request-confirmed" component={RequestConfirmed} />
         </Switch>
-        <div className="div">
-          {/* <ProgressBar width={400} percent={this.state.percent} />
-          <button onClick={() =>
-            this.updateProgress("percent", this.state.percent + 0.2)
-          }
-          >
-            More Progress
-          </button> */}
-        </div>
       </div>
     );
   }
-}
 
 export default App;
