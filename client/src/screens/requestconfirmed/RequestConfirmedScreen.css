@@ -20,30 +20,32 @@ background-repeat: no-repeat;
 
 .confirm-container{
   margin: auto;
-  width: 220px;
+  width: 280px;
   height: 260px;
   margin-top: 200px;
   padding-top: 50px;
   background-color: white;
-  border-radius: 12px;
-  border-color: black;
-  border-style: solid;
+  border-radius: 20px;
+  border: 2px solid black;
 }
 
 .ribbon{
   width: 45%;
+  margin-left: 20px;
 }
 
 .home-button{
   text-align: match-parent;
-  font-size: 13px;
-  height: 40px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  height: 55px;
   margin-top: 80px;
   cursor: pointer;
-  width: 230px;
-  border-radius: 18px;
+  width: 260px;
+  border-radius: 30px;
   font-weight: bold;
   background-color: white;
+  border: 1px solid black;
 }
 
 .edit-button {
@@ -79,6 +81,10 @@ background-repeat: no-repeat;
   height: 30px;
   width: 100%;
   text-align: center;
+}
+
+.text {
+  padding: 10px;
 }
 
 /* Media query for large devices (laptops/desktops) */

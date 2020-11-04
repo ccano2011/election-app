@@ -39,7 +39,7 @@ const RequestConfirmedScreen = (props) => {
       </div>
       <div className="confirm-container">
         <img src={Ribbon} className="ribbon" alt="ribbon" />
-        <h2>You have requested a ballot!</h2>
+        <h2 className='text'>You have requested a ballot!</h2>
       </div>
       <div><Link to="/"><button className='home-button'>Back to Home</button></Link></div>
       <div><Link to={redirect}><button className='edit-button'>Edit your ballot</button></Link></div>
