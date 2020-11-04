@@ -44,7 +44,17 @@ input{
   margin: 5px;
   width: 200px;
   height: 20px;
+  outline: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 label{
   font-size: 14px;
   font-weight: bolder;
@@ -91,8 +101,9 @@ label{
 }
 
 .confirm-button{
-text-align: match-parent;
-font-size: 13px;
+  text-align: match-parent;
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
   height: 40px;
   margin-top: 20px;
   float: left;
@@ -101,6 +112,8 @@ font-size: 13px;
   border-radius: 18px;
   font-weight: bold;
   background-color: white;
+  border: 1px solid black;
+  outline: none;
 }
 button:hover{
   background-color:#D6DDF3;
@@ -109,7 +122,9 @@ button:hover{
   font-weight: bold;
 }
 .cancel-button{
-  font-size: 11px;
+  font-size: 12px;
+  border: 1px solid black;
+  font-family: 'Dosis', sans-serif;
   height: 30px;
   margin-top: 10px;
   width: 180px;
@@ -119,8 +134,11 @@ button:hover{
   text-align: match-parent;
   float: left;
   cursor: pointer;
+  outline: none;
+  
 }
 .cancel-button a{
   text-decoration: none;
   color: black;
+  
 }

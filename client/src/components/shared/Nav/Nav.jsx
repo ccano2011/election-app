@@ -67,9 +67,9 @@ class Nav extends Component {
                             {this.displayHamburgerMenu()}
                             {this.state.open && (
                                 <ul className='hamburgerDropDown'>
-                                    <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/' >Home</NavLink></li>
-                                    <li className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
-                                    <li className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/admin">Admin Only</NavLink></li>
+                                    <li onClick= {this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/' >Home</NavLink></li>
+                                    <li onClick= {this.state.open} className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
+                                    <li onClick= {this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/admin">Admin Only</NavLink></li>
                                 </ul>
                             )}
                         </div>

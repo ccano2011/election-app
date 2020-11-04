@@ -34,13 +34,13 @@ class App extends React.Component {
           <Route path="/request-confirmed" component={RequestConfirmed} />
         </Switch>
         <div className="div">
-          <ProgressBar width={400} percent={this.state.percent} />
+          {/* <ProgressBar width={400} percent={this.state.percent} />
           <button onClick={() =>
               this.updateProgress("percent", this.state.percent + 0.2)
             }
           >
             More Progress
-          </button>
+          </button> */}
         </div>
       </div>
     );

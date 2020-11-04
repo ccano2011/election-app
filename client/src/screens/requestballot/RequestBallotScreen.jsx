@@ -98,7 +98,7 @@ const RequestBallotScreen = () => {
             <input
               className="aptSuite"
               value={ballot.apartmentSuite}
-              name='author'
+              name='apartmentSuite'
               onChange={handleChange}
             />
           </label>
@@ -126,6 +126,7 @@ const RequestBallotScreen = () => {
             Zip Code <br />
             <input
               className="zipCode"
+              type='number'
               value={ballot.zipCode}
               name='zipCode'
               required
@@ -136,6 +137,7 @@ const RequestBallotScreen = () => {
             <label>
               Date of Birth<br />
               <input
+                type='number'
                 className="month"
                 value={ballot.month}
                 name="month"
@@ -143,6 +145,7 @@ const RequestBallotScreen = () => {
                 onChange={handleChange}
               />
               <input
+                type='number'
                 className="day"
                 value={ballot.day}
                 name="day"
@@ -150,6 +153,7 @@ const RequestBallotScreen = () => {
                 onChange={handleChange}
               />
               <input
+                type='number'
                 className="year"
                 value={ballot.year}
                 name="year"
@@ -178,7 +182,7 @@ const RequestBallotScreen = () => {
             />
           </label>
           <button type='submit' className="confirm-button" >Confirm</button>
-          <Link to="/" className='cancel-button'><button className='cancel-button'>Cancel</button></Link>
+          <Link to="/"><button className='cancel-button'>Cancel</button></Link>
         </form>
       </div>
     </div>
