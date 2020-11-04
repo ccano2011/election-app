@@ -98,7 +98,7 @@ const RequestBallotScreen = () => {
             <input
               className="aptSuite"
               value={ballot.apartmentSuite}
-              name='author'
+              name='apartmentSuite'
               onChange={handleChange}
             />
           </label>
