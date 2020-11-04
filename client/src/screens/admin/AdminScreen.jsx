@@ -25,8 +25,14 @@ function AdminScreen(props) {
     const handleDelete = async (id) => {
         await deleteRequest(id)
         setLoaded(!isLoaded)
+        alert(`Request Deleted!`)
     };
 
+    let mappingTime = ballotReq.map(function (id) {
+        return id._id
+    })
+
+    console.log(mappingTime)
     return (
         <div>
             <div className="renderedData">
