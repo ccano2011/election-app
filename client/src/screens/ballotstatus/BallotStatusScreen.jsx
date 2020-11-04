@@ -23,12 +23,13 @@ function BallotStatusScreen(props) {
             <p className="headline">Track Your Vote</p>
         </div>
       </div>
+      <div className = "progress-bar">
+            <img src={Lilguy} className="lilguy" alt="lilguy" />
+            <TrackingBar/>
+          </div>
       <div className='status'>
         <div className='logo-background'>
-          <div className = "progress-bar">
-            {/* <img src={Lilguy} className="lilguy" alt="lilguy" /> */}
-            {/* <TrackingBar/> */}
-          </div>
+          
       </div>
       <div className='text-status'>
           <p className='vote-date'>
