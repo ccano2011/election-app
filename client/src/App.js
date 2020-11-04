@@ -9,11 +9,10 @@ import RequestConfirmed from "./screens/requestconfirmed/RequestConfirmedScreen"
 import AdminScreen from "./screens/admin/AdminScreen"
 import EditBallotScreen from "./screens/requestballot/EditBallotScreen"
 import BallotStatusScreen from "./screens/ballotstatus/BallotStatusScreen";
-import ProgressBar from "./components/trackingbar/TrackingBar"
+import ProgressBar from "./components/trackingbar/TrackingBar";
 
 function App () {
 
-  
     return (
       <div className="App">
         <Nav />
