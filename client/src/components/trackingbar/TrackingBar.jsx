@@ -1,12 +1,19 @@
-import React from 'react'
-import Filler from '../trackingbar/Filler'
+import React, {useState, useEffect} from 'react'
 import './TrackingBar.css'
 
-const TrackingBar = (props) => {
+export var TrackingBar = ({ width, percent }) => {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    setValue(percent * width);
+  });
+
   return (
-    <div className="progress-bar">
-      <Filler/>
+    <div>
+      <div className="progress-div" style={{ width: width }}>
+        <div style={{ width: `${value}px` }} className="progress" />
+      </div>
     </div>
-  )
-}
+  );
+};
 export default TrackingBar
