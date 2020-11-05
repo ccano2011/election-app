@@ -10,19 +10,10 @@
 }
 
 .progress {
-  background-color: #CB3135;
+  background: linear-gradient(45deg, #5C0D10, #CB3135);
   height: 20px;
-  border-radius: 1rem;
-  transition: 1s ease;
-  transition-delay: 0.5s;
+  border-radius: .5rem;
+  transition: 1s;
   max-width: 400px;
 }
 
-/* 
-
-.filler{
-  background: #CB3135;
-  height: 100%;
-  border-radius: inherit;
-  transition: width .2s ease-in;
-} */
