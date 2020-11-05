@@ -9,14 +9,20 @@ import { Link } from "react-router-dom"
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 class BallotStatusScreen extends React.Component {
-  state = {
-    percent: 0
-  };
-  updateProgress = (field, val) => {
-    this.setState({ [field]: val });
-  };
-  // setInterval(onClick(), 1000);
-// setInterval({this.updateProgress("percent", this.state.percent + 0.2)}, 1000);
+  updateInterval;
+    state = {
+      percent: 0
+    };
+  componentDidMount() {
+      this.updateInterval = setInterval(() => {
+        this.updateProgress("percent", this.state.percent + .2)
+      }, 3000)
+    
+  }
+    updateProgress = (field, val) => {
+      this.setState({ [field]: val });
+    };
+
   
 render() {
   
@@ -31,22 +37,21 @@ render() {
             <p className="headline">Track Your Vote</p>
           </div>
         </div>
+
+
         <div className='logo-background'>
-        <div className="progress-bar">
+          <div className="progress-bar">
           <img src={Lilguy} className="lilguy" alt="lilguy" />
-          <div className="div">
+            <div className="div">
             <TrackingBar width={400} percent={this.state.percent} />
-            <button onClick={() =>
-              this.updateProgress("percent", this.state.percent + 0.2)
-            }>
-              More Progress
-          </button>
-            
+              {/* <h3>Your ballot is {(this.state.percent)*100}% there</h3> */}
+            </div>
           </div>
         </div>
+
         <div className='status'>
           
-          </div>
+          
           <div className='text-status'>
             <p className='vote-date'>
               <span>Your vote is set to be processed and counted by  </span>
@@ -71,10 +76,10 @@ render() {
                   <span> | This is text <br /> updating you about <br /> your ballot status</span>
                 </p>
               </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }

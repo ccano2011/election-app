@@ -11,11 +11,11 @@
   display: flex;
   margin-top: 10vh;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .logo-background {
   display: flex;
-  margin-top: 5%;
   color: black;
   background-image: url(../../Assets/DesktopTrackYourVoteBackground.png);
   object-fit: cover;
@@ -30,6 +30,11 @@
 .text-status {
   align-self: center;
   margin-left: 10%;
+}
+
+.status{
+  font-family: 'Dosis', sans-serif;
+
 }
 
 .vote-date {
@@ -49,7 +54,6 @@
     font-weight: 700;
     background-color: #AEBCE6;
     background-image: linear-gradient(#dddfe6, #AEBCE6);
-    margin-top: 100px;
     height: 30px;
     width: 100%;
     text-align: center;
@@ -77,11 +81,24 @@
   padding-left: 20px;
 }
 
+.progress-bar{
+  margin: 0 auto;
+}
+
 .lilguy{
   width: 100px;
   height: 100px;
+  padding-right: 305px;
+  position: relative;
+  animation: mymove 15s ease-in 2s normal forwards;
 }
 
-.progress-bar{
-  margin: 0 auto;
+@keyframes mymove {
+
+  20% {transform: translate(65px)}
+  40% {transform: translate(145px)}
+  60% {transform: translate(220px)}
+  80% {transform: translate(300px)}
+  100% {transform: translate(365px)}
+  
 }
