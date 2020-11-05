@@ -4,7 +4,7 @@ import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
 import { Link, useHistory } from "react-router-dom"
 //ToggleDisplay from an npm package I found online
-import ToggleDisplay from 'react-toggle-display'
+// import ToggleDisplay from 'react-toggle-display'
 import ArrowImg from '../../Assets/left-arrow.svg';
 
 
@@ -26,6 +26,7 @@ const RequestBallotScreen = () => {
   })
 
   const [isCreated, setCreated] = useState(false)
+  console.log(isCreated)
 
   const handleChange = (event) => {
     const { name, value } = event.target
