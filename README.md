@@ -45,7 +45,7 @@ const RequestBallot = new Schema(
     streetAddress: { type: String, required: true },
     apartmentSuite: { type: String, required: false },
     city: { type: String, required: true },
-    state: { type: String, required: true },
+    county: { type: String, required: true },
     zipCode: { type: String, required: true },
     dob: { type: String, required: true },
     email: { type: String, required: false },
