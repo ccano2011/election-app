@@ -3,9 +3,9 @@ A collaborative team project with UX/UI
 
 Team Members:
 
-- Annie Wang
-- Brian Nester
-- Dani Broadwater
+- Annie Wang (https://github.com/annie1289)
+- Brian Nester (https://github.com/CyberDragonWizard)
+- Dani Broadwater (https://github.com/bw-dani)
 - Chris Cano (Git Tzar)
 
 # Outline & Figma
