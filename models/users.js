@@ -9,4 +9,4 @@ const Users = new Schema(
     }
 )
 
-module.exports = mongoose.model('Users', Users)
+module.exports = mongoose.model('users', Users)

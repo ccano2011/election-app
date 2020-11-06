@@ -1,6 +1,6 @@
 const { runInContext } = require('vm')
 const db = require('../db/connection')
-const Schema = require('../models/user')
+const Schema = require('../models/users')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
