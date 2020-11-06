@@ -1,6 +1,6 @@
 const { runInContext } = require('vm')
 const db = require('../db/connection')
-const Schema = require('../models/schema')
+const Schema = require('../models/user')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -8,12 +8,12 @@ const user = async () => {
     const account =
         [
             {
-                "userName": "lorenipsum123",
+                "username": "lorenipsum123",
                 "password": "1234"
             },
         ]
     await Schema.insertMany(account)
-    console.log("Seeded dummy info!")
+    console.log("Seeded dummy user!")
 }
 
 const run = async () => {
