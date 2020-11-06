@@ -18,6 +18,9 @@ Team Members:
 
 ![Imgur](https://i.imgur.com/WZAmX5C.png)
 
+# Second Iteration Figma
+
+![Imgur](https://i.imgur.com/piPLGCM.png)
 
 # UX Team Resources
 
