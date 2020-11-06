@@ -15,7 +15,7 @@ const RequestBallot = new Schema(
     month: { type: String, required: true },
     year: { type: String, required: true },
     email: { type: String, required: false },
-    cell: { type: String, required: false }
+    cell: { type: String, required: false },
   }
 )
 
