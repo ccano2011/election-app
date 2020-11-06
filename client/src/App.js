@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import Home from '../src/screens/home/Home'
-import Nav from './components/shared/Nav/Nav'
+// import Nav from './components/shared/Nav/Nav'
 import RequestBallotScreen from "./screens/requestballot/RequestBallotScreen"
 import { Route, Switch } from "react-router-dom"
 import DisclaimerScreen from "./screens/disclaimer/DisclaimerScreen";
