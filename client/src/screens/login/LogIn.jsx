@@ -4,7 +4,7 @@ import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
 
 const LogIn = () => {
-  
+
     return (
         <div className='login-page'>
             <form className='login-form'>

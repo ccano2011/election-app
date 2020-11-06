@@ -41,7 +41,7 @@ const RequestConfirmedScreen = (props) => {
         <img src={Ribbon} className="ribbon" alt="ribbon" />
         <h2 className='text'>You have requested a ballot!</h2>
       </div>
-      <div><Link to="/"><button className='home-button'>Back to Home</button></Link></div>
+      <div><Link to="/dashboard"><button className='home-button'>Back to Home</button></Link></div>
       <div><Link to={redirect}><button className='edit-button'>Edit your ballot</button></Link></div>
     </div>
   )

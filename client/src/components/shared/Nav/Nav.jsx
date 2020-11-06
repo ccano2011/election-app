@@ -67,6 +67,9 @@ class Nav extends Component {
                             {this.displayHamburgerMenu()}
                             {this.state.open && (
                                 <ul className='hamburgerDropDown'>
+                                    <li onClick={this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/dashboard' >Home</NavLink></li>
+                                    <li onClick={this.state.open} className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
+                                    <li onClick={this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/admin">Admin Only</NavLink></li>
                                     <li onClick= {this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/dashboard' >Home</NavLink></li>
                                     <li onClick= {this.state.open} className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
                                     <li onClick= {this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/admin">Admin Only</NavLink></li>
@@ -78,6 +81,9 @@ class Nav extends Component {
                                 <img className='logo' src={LogoImg} alt='logo' height='65' weight='65' />
                             </div>
                         </NavLink>
+                        <NavLink className='link' to="/account-landing-page">
+                            <div className='ballotIcon'>
+                                <img className='svg' src={BallotImg} alt='account' />
                         <NavLink className='link' to='/account-landing-page'>
                             <div className='ballotIcon'>
                                 <img className='logo' src={BallotImg} alt='account' height='55' weight='55' />

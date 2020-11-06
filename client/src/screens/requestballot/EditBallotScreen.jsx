@@ -58,7 +58,7 @@ const EditBallotScreen = (props) => {
         <div className="ballotRequest">
             <Nav />
             <div className='subHeader'>
-                <Link to='/'>
+                <Link to='/dashboard'>
                     <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
                 </Link>
                 <p className="headline">Edit Your Ballot Request</p>
@@ -182,7 +182,7 @@ const EditBallotScreen = (props) => {
                         />
                     </label>
                     <button type='submit' className="confirm-button" >Confirm</button>
-                    <Link to="/" ><button className='cancel-button'>Cancel</button></Link>
+                    <Link to="/dashboard" ><button className='cancel-button'>Cancel</button></Link>
 
                 </form>
             </div>
