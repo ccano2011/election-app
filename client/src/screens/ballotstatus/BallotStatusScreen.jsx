@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './BallotStatusScreen.css'
 import Nav from "../../components/shared/Nav/Nav";
-import { getRequests} from '../../services/ballotConnect';
+// import { getRequests } from '../../services/ballotConnect';
 import Lilguy from "../../Assets/lilguy.png"
 import TrackingBar from "../../components/trackingbar/TrackingBar"
 import ArrowImg from '../../Assets/left-arrow.svg';
@@ -10,22 +10,22 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 class BallotStatusScreen extends React.Component {
   updateInterval;
-    state = {
-      percent: 0
-    };
+  state = {
+    percent: 0
+  };
   componentDidMount() {
-      this.updateInterval = setInterval(() => {
-        this.updateProgress("percent", this.state.percent + .2)
-      }, 3000)
-    
-  }
-    updateProgress = (field, val) => {
-      this.setState({ [field]: val });
-    };
+    this.updateInterval = setInterval(() => {
+      this.updateProgress("percent", this.state.percent + .2)
+    }, 3000)
 
-  
-render() {
-  
+  }
+  updateProgress = (field, val) => {
+    this.setState({ [field]: val });
+  };
+
+
+  render() {
+
     return (
       <div >
         <div>
@@ -41,17 +41,17 @@ render() {
 
         <div className='logo-background'>
           <div className="progress-bar">
-          <img src={Lilguy} className="lilguy" alt="lilguy" />
+            <img src={Lilguy} className="lilguy" alt="lilguy" />
             <div className="div">
-            <TrackingBar width={400} percent={this.state.percent} />
+              <TrackingBar width={400} percent={this.state.percent} />
               {/* <h3>Your ballot is {(this.state.percent)*100}% there</h3> */}
             </div>
           </div>
         </div>
 
         <div className='status'>
-          
-          
+
+
           <div className='text-status'>
             <p className='vote-date'>
               <span>Your vote is set to be processed and counted by  </span>
@@ -71,15 +71,15 @@ render() {
               </p>
               <div className='ballot-text'>
                 <p>
-                
+
                   <span style={{ fontWeight: "bold" }}> Ballot Status</span>
                   <span> | This is text <br /> updating you about <br /> your ballot status</span>
                 </p>
               </div>
-              </div>
             </div>
           </div>
         </div>
+      </div>
     );
   }
 }
