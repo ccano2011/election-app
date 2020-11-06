@@ -19,9 +19,10 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={LogIn} />
+        <Route path='/dashboard' component={Home} />
         <Route path='/status' component={BallotStatusScreen} />
         <Route path='/disclaimer' component={DisclaimerScreen} />
         <Route path="/request-ballot" component={RequestBallotScreen} />
@@ -30,9 +31,9 @@ function App() {
         <Route path="/request-confirmed" component={RequestConfirmed} />
         <Route path="/create-account" component={CreateAccountScreen} />
         <Route path="/login" component={LogIn} />
-        <Route path = "/account-landing-page" component = {AccountLandingPage} />
-        <Route path="/delete-account" component={DeleteAccount}/>
-        <Route path="/account-deleted" component={AccountDeleted}/>
+        <Route path="/account-landing-page" component={AccountLandingPage} />
+        <Route path="/delete-account" component={DeleteAccount} />
+        <Route path="/account-deleted" component={AccountDeleted} />
       </Switch>
     </div>
   );

@@ -1,0 +1,21 @@
+.deletedSubHeader {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    background-color: #AEBCE6;
+    background-image: linear-gradient(#dddfe6, #AEBCE6);
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+  }
+   .deletedHeadline {
+     margin-top: 0;
+     padding-top: 5px;
+     margin-bottom: 0;
+   }
+  .emptyNav {
+    padding: 50px 0;
+      max-width: 100%;
+      background-color: #061540;
+      margin-bottom: 0;
+  }

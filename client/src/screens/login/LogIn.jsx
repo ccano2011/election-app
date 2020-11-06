@@ -4,24 +4,26 @@ import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
 
 const LogIn = () => {
-  
+
     return (
         <div className='login-page'>
-            <form className='input-form'>
-                <label className="username">
+            <form className='login-form'>
+                <label>
                 Username <br />
                 <input
                 />
             </label>
-            <label className="password">
+            <label>
             Password <br />
             <input
             type="password"
             />
             </label>
             </form>
+            <div className='buttons'>
             <LogInButton />
             <SignUpButton />
+            </div>
         </div>
     )
 }

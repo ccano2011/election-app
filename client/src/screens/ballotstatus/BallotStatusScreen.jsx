@@ -31,7 +31,7 @@ class BallotStatusScreen extends React.Component {
         <div>
           <Nav />
           <div className='subHeader'>
-            <Link to='/'>
+            <Link to='/dashboard'>
               <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
             </Link>
             <p className="headline">Track Your Vote</p>
