@@ -3,9 +3,9 @@ A collaborative team project with UX/UI
 
 Team Members:
 
-- Annie Wang
-- Brian Nester
-- Dani Broadwater
+- Annie Wang (https://github.com/annie1289)
+- Brian Nester (https://github.com/CyberDragonWizard)
+- Dani Broadwater (https://github.com/bw-dani)
 - Chris Cano (Git Tzar)
 
 # Outline & Figma
@@ -45,7 +45,7 @@ const RequestBallot = new Schema(
     streetAddress: { type: String, required: true },
     apartmentSuite: { type: String, required: false },
     city: { type: String, required: true },
-    state: { type: String, required: true },
+    county: { type: String, required: true },
     zipCode: { type: String, required: true },
     dob: { type: String, required: true },
     email: { type: String, required: false },

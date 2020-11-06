@@ -25,6 +25,7 @@ const EditBallotScreen = (props) => {
     const [isUpdated, setUpdated] = useState(false)
     let params = useParams();
     console.log(params.id)
+    console.log(isUpdated)
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -49,7 +50,7 @@ const EditBallotScreen = (props) => {
         const updated = await updateRequest(params.id, ballot)
         setUpdated({ updated })
         setTimeout(() => {
-            history.push(`/request-confirmed`)
+            history.push(`/admin`)
         }, 1000)
     }
 
@@ -181,7 +182,11 @@ const EditBallotScreen = (props) => {
                         />
                     </label>
                     <button type='submit' className="confirm-button" >Confirm</button>
+<<<<<<< HEAD
                     <Link to="/" ><button className='cancel-button'>Cancel</button></Link>
+=======
+                    <Link to="/"><button className='cancel-button'>Cancel</button></Link>
+>>>>>>> 0423aaec59650473f66cfd4e40229f49198db131
                 </form>
             </div>
         </div>

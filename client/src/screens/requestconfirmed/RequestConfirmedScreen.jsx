@@ -10,7 +10,7 @@ const RequestConfirmedScreen = (props) => {
   // const [post, setPost] = useState(null)
 
   const [ballotReq, setBallotReq] = useState([]);
-  const [isLoaded, setLoaded] = useState(false)
+  // const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const ballotData = async () => {
@@ -19,7 +19,7 @@ const RequestConfirmedScreen = (props) => {
       // setRenderReq(ballotDataApi)
     }
     ballotData();
-  }, [isLoaded])
+  }, [props.isLoaded])
 
   let mappingTime = ballotReq.map(function (id) {
     return id._id

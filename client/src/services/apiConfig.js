@@ -3,7 +3,7 @@ import axios from 'axios'
 let apiUrl
 
 const apiUrls = {
-    // production: 'INSERT HEROKU URL HERE!',
+    production: 'https://election-ballot-app.herokuapp.com/',
     development: 'http://localhost:3000/'
 }
 
