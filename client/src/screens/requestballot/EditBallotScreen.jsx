@@ -181,7 +181,7 @@ const EditBallotScreen = (props) => {
                         />
                     </label>
                     <button type='submit' className="confirm-button" >Confirm</button>
-                    <Link to="/" className='cancel-button'><button className='cancel-button'>Cancel</button></Link>
+                    <Link to="/" ><button className='cancel-button'>Cancel</button></Link>
                 </form>
             </div>
         </div>
