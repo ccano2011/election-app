@@ -4,6 +4,8 @@ import Ribbon from '../../Assets/ribbon.png';
 import { getRequests } from '../../services/ballotConnect';
 import ArrowImg from '../../Assets/left-arrow.svg';
 import { Link } from "react-router-dom";
+import Nav from "../../components/shared/Nav/Nav";
+
 
 const RequestConfirmedScreen = (props) => {
   console.log(props)
@@ -31,6 +33,7 @@ const RequestConfirmedScreen = (props) => {
 
   return (
     <div className="ballot-screen">
+      <Nav />
       <div className='subHeader'>
         <Link to={redirect}>
           <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
