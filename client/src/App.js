@@ -9,6 +9,7 @@ import RequestConfirmed from "./screens/requestconfirmed/RequestConfirmedScreen"
 import AdminScreen from "./screens/admin/AdminScreen"
 import EditBallotScreen from "./screens/requestballot/EditBallotScreen"
 import BallotStatusScreen from "./screens/ballotstatus/BallotStatusScreen";
+import CreateAccountScreen from "./screens/createaccount/createAccountScreen";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/admin" component={AdminScreen} />
         <Route path="/edit-ballot/:id" component={EditBallotScreen} />
         <Route path="/request-confirmed" component={RequestConfirmed} />
+        <Route path="/create-account" component={CreateAccountScreen} />
       </Switch>
     </div>
   );
