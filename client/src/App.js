@@ -10,6 +10,9 @@ import AdminScreen from "./screens/admin/AdminScreen"
 import EditBallotScreen from "./screens/requestballot/EditBallotScreen"
 import BallotStatusScreen from "./screens/ballotstatus/BallotStatusScreen";
 import AccountLandingPage from "./screens/AccountLandingPage/AccountLandingPage";
+import DeleteAccount from './screens/DeleteAccount/deleteAccount'
+import AccountDeleted from './screens/AccountDeleted/accountDeleted'
+
 function App() {
 
   return (
@@ -24,6 +27,8 @@ function App() {
         <Route path="/edit-ballot/:id" component={EditBallotScreen} />
         <Route path="/request-confirmed" component={RequestConfirmed} />
         <Route path = "/account-landing-page" component = {AccountLandingPage} />
+        <Route path="/delete-account" component={DeleteAccount}/>
+        <Route path="/account-deleted" component={AccountDeleted}/>
       </Switch>
     </div>
   );
