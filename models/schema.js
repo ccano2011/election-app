@@ -19,4 +19,16 @@ const RequestBallot = new Schema(
   }
 )
 
-module.exports = mongoose.model('RequestBallot', RequestBallot)
+const Users = new Schema(
+  {
+    userName: { type: String, required: true },
+    password: { type: String, required: true },
+  }
+)
+
+module.exports = mongoose.model('RequestBallot', RequestBallot), mongoose.model('Users', Users)
+
+// module.exports = {
+//   requestCertification: requestCertification,
+//   requestStudentstatus: requestStudentstatus
+// }
