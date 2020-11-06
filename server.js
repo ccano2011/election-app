@@ -3,6 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const Schema = require('./models/schema')
+const user = require('./models/user')
 // const postsRoutes = require('./routes/posts');
 
 const db = require('./db/connection')
@@ -31,6 +32,15 @@ app.get('/ballotreq', async (req, res) => {
     }
 })
 
+app.get('/users', async (req, res) => {
+  try {
+      const info = await user.find()
+      res.json(info)
+  } catch (error) {
+      res.status(500).json({ error: error.message })
+  }
+})
+
 app.get('/ballotreq/:id', async (req, res) => {
     try {
         const { id } = req.params
@@ -43,6 +53,18 @@ app.get('/ballotreq/:id', async (req, res) => {
     }
 })
 
+app.get('/users/:id', async (req, res) => {
+  try {
+      const { id } = req.params
+      const info = await user.findById(id)
+      if (!info) throw Error('Request not found!')
+      res.json(info)
+  } catch (e) {
+      console.log(e)
+      res.send('Catch error: request not found!')
+  }
+})
+
 app.post('/ballotreq', async (req, res) => {
     try {
         const info = await new Schema(req.body)
@@ -52,6 +74,17 @@ app.post('/ballotreq', async (req, res) => {
         console.log(error)
         res.status(500).json({ error: error.message })
     }
+})
+
+app.post('/users', async (req, res) => {
+  try {
+      const info = await new user(req.body)
+      await info.save()
+      res.status(201).json(info)
+  } catch (error) {
+      console.log(error)
+      res.status(500).json({ error: error.message })
+  }
 })
 
 app.put('/ballotreq/:id', async (req, res) => {
@@ -67,6 +100,19 @@ app.put('/ballotreq/:id', async (req, res) => {
     })
 })
 
+app.put('/users/:id', async (req, res) => {
+  const { id } = req.params
+  await user.findByIdAndUpdate(id, req.body, { new: true }, (error, info) => {
+      if (error) {
+          return res.status(500).json({ error: error.message })
+      }
+      if (!info) {
+          return res.status(404).json({ message: 'Info not found!' })
+      }
+      res.status(200).json(info)
+  })
+})
+
 app.delete('/ballotreq/:id', async (req, res) => {
     try {
         const { id } = req.params;
@@ -78,4 +124,17 @@ app.delete('/ballotreq/:id', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
+})
+
+app.delete('/users/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const deleted = await user.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Request deleted, democracy subverted")
+      }
+      throw new Error("Request not found, sorry Putin")
+  } catch (error) {
+      res.status(500).json({ error: error.message })
+  }
 })
