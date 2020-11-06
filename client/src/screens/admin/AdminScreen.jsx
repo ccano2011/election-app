@@ -36,6 +36,7 @@ function AdminScreen(props) {
     console.log(mappingTime)
     return (
         <div>
+          <Nav />
             <div className='subHeader'>
                 <Link to='/dashboard'>
                     <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />

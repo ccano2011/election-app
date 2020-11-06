@@ -7,21 +7,23 @@ const LogIn = () => {
 
     return (
         <div className='login-page'>
-            <form className='input-form'>
+            <form className='login-form'>
                 <label>
-                    Username <br />
-                    <input
-                    />
-                </label>
-                <label>
-                    Password <br />
-                    <input
-                        type="password"
-                    />
-                </label>
+                Username <br />
+                <input
+                />
+            </label>
+            <label>
+            Password <br />
+            <input
+            type="password"
+            />
+            </label>
             </form>
+            <div className='buttons'>
             <LogInButton />
             <SignUpButton />
+            </div>
         </div>
     )
 }

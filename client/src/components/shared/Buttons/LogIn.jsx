@@ -26,7 +26,7 @@ export default function IconLabelButtons() {
 
   return (
     <div>
-      <Link className='login-link' to="/">
+      <Link className='login-link' to="/dashboard">
       <Button
         variant="contained"
         className={classes.button}

@@ -55,10 +55,6 @@ nav {
     animation-name: bouncy-bouncy;
 }
 
-.svg {
-    filter: brightness(0) invert(1);
-}
-
 .hamburgerDropDown {
     position: fixed;
     left: 0px;
