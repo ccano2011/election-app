@@ -15,20 +15,8 @@ const RequestBallot = new Schema(
     month: { type: String, required: true },
     year: { type: String, required: true },
     email: { type: String, required: false },
-    cell: { type: String, required: false }
+    cell: { type: String, required: false },
   }
 )
 
-const Users = new Schema(
-  {
-    userName: { type: String, required: true },
-    password: { type: String, required: true },
-  }
-)
-
-module.exports = mongoose.model('RequestBallot', RequestBallot), mongoose.model('Users', Users)
-
-// module.exports = {
-//   requestCertification: requestCertification,
-//   requestStudentstatus: requestStudentstatus
-// }
+module.exports = mongoose.model('RequestBallot', RequestBallot)
