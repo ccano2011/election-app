@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Nav from "../../components/shared/Nav/Nav";
 import "./Home.css";
 import TrackButton from "../../components/shared/Buttons/TrackYourVoteButton";
@@ -22,7 +22,7 @@ const Home = () => {
 
         <CalendarButton />
 
-        <Link to="/admin">admin test link</Link>
+        {/* <Link to="/admin">admin test link</Link> */}
       </div>
     </div>
   );

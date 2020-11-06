@@ -4,7 +4,7 @@ import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
 import { Link, useHistory } from "react-router-dom"
 //ToggleDisplay from an npm package I found online
-import ToggleDisplay from 'react-toggle-display'
+// import ToggleDisplay from 'react-toggle-display'
 import ArrowImg from '../../Assets/left-arrow.svg';
 
 
@@ -26,6 +26,7 @@ const RequestBallotScreen = () => {
   })
 
   const [isCreated, setCreated] = useState(false)
+  console.log(isCreated)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -49,10 +50,16 @@ const RequestBallotScreen = () => {
   return (
     <div className="ballotRequest">
       <Nav />
-      <div className="ballot-header">
-        <h4>Request an Absentee Ballot</h4>
+      <div className='subHeader'>
+        <Link to='/'>
+          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+        </Link>
+        <p className="headline">Request an Absentee Ballot</p>
       </div>
-      <div><h1>Sumbitting...</h1></div>
+      <div className="ballot-header">
+        {/* <h4>Request an Absentee Ballot</h4> */}
+      </div>
+      {/* <div><h1>Sumbitting...</h1></div> */}
       <div className="ballot-container">
         <form className="ballot-form" onSubmit={handleSubmit}>
           <label className="first">
@@ -92,7 +99,7 @@ const RequestBallotScreen = () => {
             <input
               className="aptSuite"
               value={ballot.apartmentSuite}
-              name='author'
+              name='apartmentSuite'
               onChange={handleChange}
             />
           </label>
@@ -107,11 +114,11 @@ const RequestBallotScreen = () => {
             />
           </label>
           <label className="stat">
-            State <br />
+            County <br />
             <input
-              className="state"
-              value={ballot.state}
-              name='state'
+              className="county"
+              value={ballot.county}
+              name='county'
               required
               onChange={handleChange}
             />
@@ -120,6 +127,7 @@ const RequestBallotScreen = () => {
             Zip Code <br />
             <input
               className="zipCode"
+              type='number'
               value={ballot.zipCode}
               name='zipCode'
               required
@@ -128,23 +136,29 @@ const RequestBallotScreen = () => {
           </label> <br />
           <div className="dob">
             <label>
-              Date of Birth <br />
+              Date of Birth<br />
               <input
-                className="day"
-                value={ballot.day}
-                name="day"
-                onChange={handleChange}
-              />
-              <input
+                type='number'
                 className="month"
                 value={ballot.month}
                 name="month"
+                placeholder="MM"
                 onChange={handleChange}
               />
               <input
+                type='number'
+                className="day"
+                value={ballot.day}
+                name="day"
+                placeholder="DD"
+                onChange={handleChange}
+              />
+              <input
+                type='number'
                 className="year"
                 value={ballot.year}
                 name="year"
+                placeholder="Year"
                 onChange={handleChange}
               />
             </label>
@@ -169,7 +183,7 @@ const RequestBallotScreen = () => {
             />
           </label>
           <button type='submit' className="confirm-button" >Confirm</button>
-          <Link to="/" className='cancel-button'><button className='cancel-button'>Cancel</button></Link>
+          <Link to="/"><button className='cancel-button'>Cancel</button></Link>
         </form>
       </div>
     </div>
