@@ -10,7 +10,7 @@ function DisclaimerScreen() {
         <div>
             <Nav />
             <div className='subHeader'>
-                <Link to='/'>
+                <Link to='/dashboard'>
                     <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
                 </Link>
                 <p className="headline">Let's Vote</p>
@@ -25,7 +25,7 @@ function DisclaimerScreen() {
                         <li className="disclaimerListContents">• Serving as an election worker or poll watcher</li>
                         <li className="disclaimerListContents">• Having religious beliefs or practices that prevent from going to a voting center</li>
                     </div>
-                </ul> 
+                </ul>
             </div>
             <div>
                 <Link to="/request-ballot">

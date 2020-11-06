@@ -10,20 +10,20 @@ function deleteAccount(props) {
     <div>
       <Nav />
       <div className='subHeader'>
-            <Link to='/'>
-              <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
-            </Link>
-            <p className="headline">DELETE ACCOUNT</p>
+        <Link to="/account-landing-page">
+          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+        </Link>
+        <p className="headline">DELETE ACCOUNT</p>
       </div>
       <div className='delete-p'>
         <p>Are you sure you would like to delete your account?</p>
       </div>
       <div className='buttons'>
-      <div className='cancel-btn'>
-          <Link to="/"><button className="cancelAccountBtn" >Cancel</button></Link>
-      </div>
-      <div className='delete-btn'>
-        <button className="deleteAccountBtn" >Confirm</button>
+        <div className='cancel-btn'>
+          <Link to="/account-landing-page"><button className="cancelAccountBtn" >Cancel</button></Link>
+        </div>
+        <div className='delete-btn'>
+          <button className="deleteAccountBtn" >Confirm</button>
         </div>
       </div>
     </div>

@@ -30,18 +30,19 @@ const CreateAccountScreen = () => {
         const created = await createUser(user)
         setCreated({ created })
         setTimeout(() => {
-            history.push(`/`)
+            history.push(`/dashboard`)
         }, 1000)
     }
 
     return (
         <div className="createAccountDiv">
-            <Nav />
-            <div className='subHeader'>
+            <div className='emptyNav'></div>
+            {/* <Nav /> */}
+            <div className='deletedSubHeader'>
                 <Link to='/'>
                     <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
                 </Link>
-                <p className="headline">Create an Account</p>
+                <p className="deletedHeadline">Create Your Account</p>
             </div>
             <div className="user-header">
                 {/* <h4>Request an Absentee Ballot</h4> */}

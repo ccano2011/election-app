@@ -37,11 +37,11 @@ function AdminScreen(props) {
     return (
         <div>
             <div className='subHeader'>
-        <Link to='/'>
-          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
-        </Link>
-        <p className="headline">Admin</p>
-      </div>
+                <Link to='/dashboard'>
+                    <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+                </Link>
+                <p className="headline">Admin</p>
+            </div>
             <div className="renderedData">
                 {
                     ballotReq.map((post, index) => (
