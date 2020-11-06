@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Nav.css';
-import BallotImg from '../../../Assets/account.png';
+import BallotImg from '../../../Assets/ballot.svg';
 import LogoImg from '../../../Assets/logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import { NavLink } from 'react-router-dom';
@@ -70,9 +70,6 @@ class Nav extends Component {
                                     <li onClick={this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/dashboard' >Home</NavLink></li>
                                     <li onClick={this.state.open} className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
                                     <li onClick={this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/admin">Admin Only</NavLink></li>
-                                    <li onClick= {this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/dashboard' >Home</NavLink></li>
-                                    <li onClick= {this.state.open} className='nav-link' id='nav2'><NavLink style={{ textDecoration: 'none', color: 'black' }} to='/status'>Track Your Ballot</NavLink></li>
-                                    <li onClick= {this.state.open} className='nav-link'><NavLink style={{ textDecoration: 'none', color: 'black' }} to="/admin">Admin Only</NavLink></li>
                                 </ul>
                             )}
                         </div>
