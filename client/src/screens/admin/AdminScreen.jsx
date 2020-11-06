@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getRequests, deleteRequest } from '../../services/ballotConnect';
 import { Link } from "react-router-dom"
 import "./AdminScreen.css"
+import ArrowImg from '../../Assets/left-arrow.svg';
 
 function AdminScreen(props) {
     const [ballotReq, setBallotReq] = useState([]);
@@ -35,6 +36,12 @@ function AdminScreen(props) {
     console.log(mappingTime)
     return (
         <div>
+            <div className='subHeader'>
+        <Link to='/'>
+          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+        </Link>
+        <p className="headline">Admin</p>
+      </div>
             <div className="renderedData">
                 {
                     ballotReq.map((post, index) => (

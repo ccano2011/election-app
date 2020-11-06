@@ -1,11 +1,11 @@
-const Schema = require('../models/users')
+const userSchema = require('../models/users')
 const db = require('../db/connection')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const getUsers = async (req, res) => {
     try {
-        const post = await Schema.find()
+        const post = await userSchema.find()
         res.json(post)
     } catch (error) {
         res.status(500).json({ error: error.message })
@@ -15,7 +15,7 @@ const getUsers = async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const { id } = req.params
-        const post = await Schema.findById(id)
+        const post = await userSchema.findById(id)
         if (post) {
             return res.json(post)
         }
@@ -27,7 +27,7 @@ const getUser = async (req, res) => {
 
 const createUser = async (req, res) => {
     try {
-        const post = await new Schema(req.body)
+        const post = await new userSchema(req.body)
         await post.save()
         res.status(201).json(post)
     } catch (error) {
@@ -38,7 +38,7 @@ const createUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
     const { id } = req.params
-    await Schema.findByIdAndUpdate(id, req.body, { new: true }, (error, post) => {
+    await userSchema.findByIdAndUpdate(id, req.body, { new: true }, (error, post) => {
         if (error) {
             return res.status(500).json({ error: error.message })
         }
@@ -52,7 +52,7 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Schema.findByIdAndDelete(id)
+        const deleted = await userSchema.findByIdAndDelete(id)
         if (deleted) {
             return res.status(200).send("Request deleted")
         }
