@@ -21,7 +21,8 @@ function App() {
     <div className="App">
       <Nav />
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={LogIn} />
+        <Route path='/dashboard' component={Home} />
         <Route path='/status' component={BallotStatusScreen} />
         <Route path='/disclaimer' component={DisclaimerScreen} />
         <Route path="/request-ballot" component={RequestBallotScreen} />

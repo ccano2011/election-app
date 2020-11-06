@@ -16,7 +16,7 @@
     /* background-repeat: round; */
   }
 
-.input-form {
+.login-form{
     margin: 0 auto;
     margin-top: 300px;
     display: flex;
@@ -29,6 +29,13 @@
     border: 1px solid black;
     border-radius: 15px;
 }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
 
 input {
     font-family: 'Dosis', sans-serif;
