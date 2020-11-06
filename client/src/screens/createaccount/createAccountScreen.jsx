@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Nav from '../../components/shared/Nav/Nav'
+// import Nav from '../../components/shared/Nav/Nav'
 import { createUser } from '../../services/usersConnect.js'
 import { Link, useHistory } from "react-router-dom"
 import ArrowImg from '../../Assets/left-arrow.svg';
