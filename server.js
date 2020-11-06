@@ -126,20 +126,6 @@ app.delete('/ballotreq/:id', async (req, res) => {
     }
 })
 
-<<<<<<< HEAD
-app.delete('/users/:id', async (req, res) => {
-  try {
-      const { id } = req.params;
-      const deleted = await user.findByIdAndDelete(id)
-      if (deleted) {
-          return res.status(200).send("Request deleted, democracy subverted")
-      }
-      throw new Error("Request not found, sorry Putin")
-  } catch (error) {
-      res.status(500).json({ error: error.message })
-  }
-})
-=======
 app.get('/user', async (req, res) => {
     try {
         const info = await userSchema.find()
@@ -197,4 +183,3 @@ app.delete('/user/:id', async (req, res) => {
         res.status(500).json({ error: error.message })
     }
 })
->>>>>>> e675c975b07233af21b02c7822a7a9ba95e49acc
