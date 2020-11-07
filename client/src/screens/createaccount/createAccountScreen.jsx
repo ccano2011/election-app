@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { createUser } from '../../services/usersConnect.js'
 import { Link, useHistory } from "react-router-dom"
 import ArrowImg from '../../Assets/left-arrow.svg';
+import './createAccountScreen.css'
 
 
 const CreateAccountScreen = () => {
@@ -50,8 +51,10 @@ const CreateAccountScreen = () => {
             {/* <div><h1>Sumbitting...</h1></div> */}
             <div className="user-container">
                 <form className="user-form" onSubmit={handleSubmit}>
+
+                    {/* <img alt="Put your profile picture here"></img> */}
                     <label className="user">
-                        Username: <br />
+                        Create a Username: <br />
                         <input
                             className="username"
                             value={user.username}
@@ -60,8 +63,8 @@ const CreateAccountScreen = () => {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="last">
-                        Password: <br />
+                    <label className="pass">
+                        Create a Password: <br />
                         <input
                             className="password"
                             value={user.password}
