@@ -12,20 +12,16 @@ function AccountLandingPage(props) {
   return (
     <div className="whole-page">
       <Nav />
-      <div className="subHeader">
-        <Link to="/dashboard">
-          <img
-            className="arrow"
-            src={ArrowImg}
-            alt="arrow"
-            height="25"
-            weight="25"
-          />
+      <div className='subHeader'>
+        <Link to='/dashboard'>
+          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
         </Link>
         <p className="headline">My Account</p>
       </div>
 
-      <div className="accountImage"></div>
+      <div className="accountImage">
+        {/* image renders from in state */}
+      </div>
 
       <div className="accountInfo">
         {/* Username renders from react state to find username  */}
@@ -33,16 +29,16 @@ function AccountLandingPage(props) {
         <p className="accountUsername">Username: {value[0]}</p>
         <p className="accountPassword">Password: {value[1]}</p>
         <p className="accountName">Name: {value[2]} {value[3]}</p>
-        <Link style={{ textDecoration: 'none' }} to='/'>
+        <Link to='/'>
           <p className="logout">Log Out </p>
         </Link>
         {/* button with link to delete account screen */}
-        <Link style={{ textDecoration: 'none' }} to='/delete-account'>
+        <Link to='/delete-account'>
           <p className="delete-account">Delete Account</p>
         </Link>
       </div>
     </div>
-  );
+  )
 }
 
-export default AccountLandingPage;
+export default AccountLandingPage
