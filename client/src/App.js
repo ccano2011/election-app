@@ -30,10 +30,9 @@ function App() {
         const user = localStorage.getItem("user")
         setValue(JSON.parse(user))
       }
-      return
     }
     fetchUser()
-  }, [])
+  })
   console.log(value)
 
   //check if context is available with components and pass local storage to context
@@ -51,11 +50,11 @@ function App() {
         <Route path="/request-confirmed" component={RequestConfirmed} />
         <Route path="/login" component={LogIn} />
         <CreateUsers.Provider value={providerValue}>
-          <Route path="/create-account" component={CreateAccountScreen} />
-          <Route path="/request-ballot" component={RequestBallotScreen} />
-          <Route path="/account-landing-page" component={AccountLandingPage} />
-          <Route path="/delete-account" component={DeleteAccount} />
-          <Route path="/account-deleted" component={AccountDeleted} />
+          {value && <Route path="/create-account" component={CreateAccountScreen} />}
+          {value && <Route path="/request-ballot" component={RequestBallotScreen} />}
+          {value && <Route path="/account-landing-page" component={AccountLandingPage} />}
+          {value && <Route path="/delete-account" component={DeleteAccount} />}
+          {value && <Route path="/account-deleted" component={AccountDeleted} />}
         </CreateUsers.Provider>
       </div>
     </Router>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import CreateUsers from '../../components/createuser/CreateUser'
 
 
-function AccountLandingPage() {
+function AccountLandingPage(props) {
   const { value } = useContext(CreateUsers)
 
   return (
