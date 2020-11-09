@@ -17,23 +17,23 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid black',
     '&:hover': {
       backgroundColor: '#092266',
+    }
   }
-  },
-}));
+}))
 
-export default function IconLabelButtons() {
-  const classes = useStyles();
+  export default function IconLabelButtons() {
+    const classes = useStyles();
 
-  return (
-    <div>
-      <Link className='login-link' to="/dashboard">
-      <Button
-        variant="contained"
-        className={classes.button}
-      >
-        <h4 className='login-btn'>Log In</h4>  
-      </Button>
-       </Link>
-    </div>
-  );
+    return (
+      <div>
+        <Link className='login-link' to="/dashboard">
+        <Button
+          variant="contained"
+          className={classes.button}
+        >
+          <h4 className='login-btn'>Log In</h4>  
+        </Button>
+        </Link>
+      </div>
+    );
 }

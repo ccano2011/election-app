@@ -1,9 +1,9 @@
 import React from "react";
 import './App.css';
 import Home from '../src/screens/home/Home'
-// import Nav from './components/shared/Nav/Nav'
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import RequestBallotScreen from "./screens/requestballot/RequestBallotScreen"
-import { Route, Switch } from "react-router-dom"
+import { Switch } from "react-router-dom"
 import DisclaimerScreen from "./screens/disclaimer/DisclaimerScreen";
 import RequestConfirmed from "./screens/requestconfirmed/RequestConfirmedScreen"
 import AdminScreen from "./screens/admin/AdminScreen"
@@ -16,10 +16,10 @@ import DeleteAccount from './screens/DeleteAccount/deleteAccount'
 import AccountDeleted from './screens/AccountDeleted/accountDeleted'
 
 function App() {
-
+  
   return (
+    <Router>
     <div className="App">
-      {/* <Nav /> */}
       <Switch>
         <Route exact path='/' component={LogIn} />
         <Route path='/dashboard' component={Home} />
@@ -34,8 +34,10 @@ function App() {
         <Route path="/account-landing-page" component={AccountLandingPage} />
         <Route path="/delete-account" component={DeleteAccount} />
         <Route path="/account-deleted" component={AccountDeleted} />
+          
       </Switch>
-    </div>
+        </div>
+        </Router>
   );
 }
 
