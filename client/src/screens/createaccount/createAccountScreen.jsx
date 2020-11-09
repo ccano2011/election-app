@@ -60,7 +60,6 @@ const CreateAccountScreen = () => {
                 {/* <h1>{value}</h1> */}
                 {/* <button onClick={() => setValue('Value changed from within the "createAccountScreen.jsx"')}>click to change</button> */}
                 <form className="user-form" onSubmit={handleSubmit}>
-
                     {/* <img alt="Put your profile picture here"></img> */}
                     <label className="user">
                         Create a Username: <br />
@@ -82,7 +81,129 @@ const CreateAccountScreen = () => {
                             onChange={handleChange}
                         />
                     </label>
-
+                    <h3>Enter Your Info</h3>
+                    <label className="first">
+                        First Name <br />
+                        <input
+                            className="firstName"
+                            value={user.firstName}
+                            name='firstName'
+                            // placeholder={value[0]}
+                            required
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="last">
+                        Last Name <br />
+                        <input
+                            className="lastName"
+                            value={user.lastName}
+                            name='lastName'
+                            // placeholder={value[1]}
+                            required
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <br />
+                    <h4 className="reg-question">Where are you registered to vote?</h4>
+                    <label className="street">
+                        Street Address <br />
+                        <input
+                            className="address"
+                            value={user.streetAddress}
+                            name='streetAddress'
+                            required
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="apt">
+                        Apartment/Suite <br />
+                        <input
+                            className="aptSuite"
+                            value={user.apartmentSuite}
+                            name='apartmentSuite'
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="cit">
+                        City <br />
+                        <input
+                            className="city"
+                            value={user.city}
+                            name='city'
+                            required
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="stat">
+                        County <br />
+                        <input
+                            className="county"
+                            value={user.county}
+                            name='county'
+                            required
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="zip">
+                        Zip Code <br />
+                        <input
+                            className="zipCode"
+                            type='number'
+                            value={user.zipCode}
+                            name='zipCode'
+                            required
+                            onChange={handleChange}
+                        />
+                    </label> <br />
+                    <div className="dob">
+                        <label>
+                            Date of Birth<br />
+                            <input
+                                type='number'
+                                className="month"
+                                value={user.month}
+                                name="month"
+                                placeholder="MM"
+                                onChange={handleChange}
+                            />
+                            <input
+                                type='number'
+                                className="day"
+                                value={user.day}
+                                name="day"
+                                placeholder="DD"
+                                onChange={handleChange}
+                            />
+                            <input
+                                type='number'
+                                className="year"
+                                value={user.year}
+                                name="year"
+                                placeholder="Year"
+                                onChange={handleChange}
+                            />
+                        </label>
+                    </div>
+                    <br />
+                    <label className='em'>
+                        Email Address <br />
+                        <input
+                            className="email"
+                            value={user.email}
+                            name='email'
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="cellPhone">
+                        Cell phone Number <br />
+                        <input
+                            className="cell"
+                            value={user.cell}
+                            name='cell'
+                            onChange={handleChange}
+                        />
+                    </label>
                     <button type='submit' className="confirm-button" >Confirm</button>
                     <Link to="/"><button className='cancel-button'>Cancel</button></Link>
                 </form>
