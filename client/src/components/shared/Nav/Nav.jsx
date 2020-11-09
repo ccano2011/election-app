@@ -80,7 +80,7 @@ class Nav extends Component {
                         </NavLink>
                         <NavLink className='link' to="/account-landing-page">
                             <div className='ballotIcon'>
-                                <img className='logo' height='60' weight='60' src={BallotImg} alt='account' />
+                            <img className='logo' src={BallotImg} alt='account' height='55' weight='55' />
                             </div>
                         </NavLink>
                     </div>

@@ -32,6 +32,15 @@ app.get('/ballotreq', async (req, res) => {
     }
 })
 
+app.get('/users', async (req, res) => {
+  try {
+      const info = await user.find()
+      res.json(info)
+  } catch (error) {
+      res.status(500).json({ error: error.message })
+  }
+})
+
 app.get('/ballotreq/:id', async (req, res) => {
     try {
         const { id } = req.params
@@ -42,6 +51,18 @@ app.get('/ballotreq/:id', async (req, res) => {
         console.log(e)
         res.send('Catch error: request not found!')
     }
+})
+
+app.get('/users/:id', async (req, res) => {
+  try {
+      const { id } = req.params
+      const info = await user.findById(id)
+      if (!info) throw Error('Request not found!')
+      res.json(info)
+  } catch (e) {
+      console.log(e)
+      res.send('Catch error: request not found!')
+  }
 })
 
 app.post('/ballotreq', async (req, res) => {
@@ -55,6 +76,17 @@ app.post('/ballotreq', async (req, res) => {
     }
 })
 
+app.post('/users', async (req, res) => {
+  try {
+      const info = await new user(req.body)
+      await info.save()
+      res.status(201).json(info)
+  } catch (error) {
+      console.log(error)
+      res.status(500).json({ error: error.message })
+  }
+})
+
 app.put('/ballotreq/:id', async (req, res) => {
     const { id } = req.params
     await Schema.findByIdAndUpdate(id, req.body, { new: true }, (error, info) => {
@@ -66,6 +98,19 @@ app.put('/ballotreq/:id', async (req, res) => {
         }
         res.status(200).json(info)
     })
+})
+
+app.put('/users/:id', async (req, res) => {
+  const { id } = req.params
+  await user.findByIdAndUpdate(id, req.body, { new: true }, (error, info) => {
+      if (error) {
+          return res.status(500).json({ error: error.message })
+      }
+      if (!info) {
+          return res.status(404).json({ message: 'Info not found!' })
+      }
+      res.status(200).json(info)
+  })
 })
 
 app.delete('/ballotreq/:id', async (req, res) => {
