@@ -21,7 +21,7 @@ function App() {
   const [value, setValue] = useState(null)
   //This useMemo code is lifted from a YouTube tutorial: https://youtu.be/lhMKvyLRWo0?t=407
   //From what I understand, useMemo will memorize the function and variable here for use in other components without needing to create objects 
-  //everytime to pass in the value in the components
+  //everytime to pass in the value in the components. 
   const providerValue = useMemo(() => ({ value, setValue }), [value, setValue])
 
   return (
@@ -33,7 +33,6 @@ function App() {
         <Route path='/dashboard' component={Home} />
         <Route path='/status' component={BallotStatusScreen} />
         <Route path='/disclaimer' component={DisclaimerScreen} />
-
         <Route path="/admin" component={AdminScreen} />
         <Route path="/edit-ballot/:id" component={EditBallotScreen} />
         <Route path="/request-confirmed" component={RequestConfirmed} />
@@ -41,10 +40,10 @@ function App() {
         <CreateUsers.Provider value={providerValue}>
           <Route path="/create-account" component={CreateAccountScreen} />
           <Route path="/request-ballot" component={RequestBallotScreen} />
+          <Route path="/account-landing-page" component={AccountLandingPage} />
+          <Route path="/delete-account" component={DeleteAccount} />
+          <Route path="/account-deleted" component={AccountDeleted} />
         </CreateUsers.Provider>
-        <Route path="/account-landing-page" component={AccountLandingPage} />
-        <Route path="/delete-account" component={DeleteAccount} />
-        <Route path="/account-deleted" component={AccountDeleted} />
       </div>
     </Router>
   );
