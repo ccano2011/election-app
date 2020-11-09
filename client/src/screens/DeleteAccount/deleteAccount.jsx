@@ -1,11 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './deleteAccount.css'
 import Nav from "../../components/shared/Nav/Nav";
 import ArrowImg from '../../Assets/left-arrow.svg';
-import { Link } from "react-router-dom"
+import { getUsers, deleteUser } from '../../services/usersConnect'
+// import CreateUsers from '../../components/createuser/CreateUser'
+import { Link, useHistory } from "react-router-dom"
 
 
-function deleteAccount(props) {
+function DeleteAccount(props) {
+  const [isLoaded, setLoaded] = useState(false)
+  const [userReq, setUserReq] = useState([]);
+
+  useEffect(() => {
+    const userData = async () => {
+      const userDataApi = await getUsers()
+      setUserReq(userDataApi)
+      // setRenderReq(ballotDataApi)
+    }
+    userData();
+  }, [props.isLoaded])
+  console.log(userReq)
+
+  const history = useHistory()
+
+  const handleDelete = async () => {
+    await deleteUser(currentUser)
+    setLoaded(!isLoaded)
+    // alert(`Request Deleted!`)
+    setTimeout(() => {
+      history.push(`/account-deleted`)
+    }, 200)
+  };
+
+  let mappingTime = userReq.map(function (id) {
+    return id._id
+  })
+  console.log(mappingTime)
+
+  const currentUser = mappingTime.slice(-1)
+  console.log(currentUser)
+
   return (
     <div>
       <Nav />
@@ -23,11 +57,11 @@ function deleteAccount(props) {
           <Link to="/account-landing-page"><button className="cancelAccountBtn" >Cancel</button></Link>
         </div>
         <div className='delete-btn'>
-          <button className="deleteAccountBtn" >Confirm</button>
+          <button className="deleteAccountBtn" onClick={handleDelete} >Confirm</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default deleteAccount;
+export default DeleteAccount;
