@@ -25,7 +25,7 @@ function AccountLandingPage() {
         {/* Password renders from react state to find username  */}
         <p className="username">Username: </p>
         <p className="password">Password: </p>
-        <Link to='/'>
+        <Link style={{ textDecoration: 'none' }} to='/'>
           <p className="logout">Log Out </p>
         </Link>
         {/* button with link to delete account screen */}
