@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect } from "react";
 import './App.css';
 import Home from '../src/screens/home/Home'
-// import Nav from './components/shared/Nav/Nav'
 import RequestBallotScreen from "./screens/requestballot/RequestBallotScreen"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import DisclaimerScreen from "./screens/disclaimer/DisclaimerScreen";

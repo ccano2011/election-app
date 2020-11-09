@@ -1,6 +1,5 @@
 import React from 'react';
 import './accountDeleted.css'
-// import Nav from "../../components/shared/Nav/Nav"
 import ArrowImg from '../../Assets/left-arrow.svg';
 import { Link } from "react-router-dom"
 
