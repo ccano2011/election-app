@@ -10,7 +10,6 @@ import Nav from "../../components/shared/Nav/Nav";
 const RequestConfirmedScreen = (props) => {
   console.log(props)
   // const [post, setPost] = useState(null)
-
   const [ballotReq, setBallotReq] = useState([]);
   // const [isLoaded, setLoaded] = useState(false)
 

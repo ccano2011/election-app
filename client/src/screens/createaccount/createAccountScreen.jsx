@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState, /*createContext*/ } from 'react';
 // import Nav from '../../components/shared/Nav/Nav'
 import { createUser } from '../../services/usersConnect.js'
 import { Link, useHistory } from "react-router-dom"
 import ArrowImg from '../../Assets/left-arrow.svg';
+import CreateUsers from '../../components/createuser/CreateUser'
 import './createAccountScreen.css'
 
 
 const CreateAccountScreen = () => {
+    const { value, setValue } = useContext(CreateUsers)
 
     const [user, setuser] = useState({
         username: '',
@@ -24,17 +26,22 @@ const CreateAccountScreen = () => {
         })
     }
 
+    const context = Object.values(user)
+    console.log(context)
     const history = useHistory()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const created = await createUser(user)
         setCreated({ created })
+        //I tried to get pass in the user in state to setValue, but get an error 
+        //regarding objects not being valid children in react... what to do?? Change into an array?
+        setValue(context)
         setTimeout(() => {
             history.push(`/dashboard`)
         }, 1000)
     }
-
+    console.log(value)
     return (
         <div className="createAccountDiv">
             <div className='emptyNav'></div>
@@ -50,6 +57,8 @@ const CreateAccountScreen = () => {
             </div>
             {/* <div><h1>Sumbitting...</h1></div> */}
             <div className="user-container">
+                {/* <h1>{value}</h1> */}
+                {/* <button onClick={() => setValue('Value changed from within the "createAccountScreen.jsx"')}>click to change</button> */}
                 <form className="user-form" onSubmit={handleSubmit}>
 
                     {/* <img alt="Put your profile picture here"></img> */}
@@ -73,6 +82,7 @@ const CreateAccountScreen = () => {
                             onChange={handleChange}
                         />
                     </label>
+
                     <button type='submit' className="confirm-button" >Confirm</button>
                     <Link to="/"><button className='cancel-button'>Cancel</button></Link>
                 </form>
@@ -81,3 +91,7 @@ const CreateAccountScreen = () => {
     )
 }
 export default CreateAccountScreen
+
+//use context hooks
+//on the front end; listen for the input that will match
+//on the back-end; findUserBy: email

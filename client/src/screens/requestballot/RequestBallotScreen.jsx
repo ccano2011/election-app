@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './RequestBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
@@ -6,9 +6,12 @@ import { Link, useHistory } from "react-router-dom"
 //ToggleDisplay from an npm package I found online
 // import ToggleDisplay from 'react-toggle-display'
 import ArrowImg from '../../Assets/left-arrow.svg';
+import CreateUsers from '../../components/createuser/CreateUser'
+
 
 
 const RequestBallotScreen = () => {
+  const { value } = useContext(CreateUsers)
 
   const [ballot, setBallot] = useState({
     firstName: '',
@@ -68,6 +71,7 @@ const RequestBallotScreen = () => {
               className="firstName"
               value={ballot.firstName}
               name='firstName'
+              placeholder={value[0]}
               required
               onChange={handleChange}
             />
@@ -78,6 +82,7 @@ const RequestBallotScreen = () => {
               className="lastName"
               value={ballot.lastName}
               name='lastName'
+              placeholder={value[1]}
               required
               onChange={handleChange}
             />
