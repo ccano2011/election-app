@@ -33,7 +33,7 @@ function App() {
       return
     }
     fetchUser()
-  }, [])
+  }, [value])
   console.log(value)
 
   //check if context is available with components and pass local storage to context
