@@ -37,6 +37,8 @@ const CreateAccountScreen = () => {
         //I tried to get pass in the user in state to setValue, but get an error 
         //regarding objects not being valid children in react... what to do?? Change into an array?
         setValue(context)
+        localStorage.setItem("user", JSON.stringify(context))
+        // window.location.reload()
         setTimeout(() => {
             history.push(`/dashboard`)
         }, 1000)

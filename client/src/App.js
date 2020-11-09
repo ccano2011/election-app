@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import './App.css';
 import Home from '../src/screens/home/Home'
 // import Nav from './components/shared/Nav/Nav'
@@ -24,6 +24,19 @@ function App() {
   //everytime to pass in the value in the components. 
   const providerValue = useMemo(() => ({ value, setValue }), [value, setValue])
 
+  useEffect(() => {
+    const fetchUser = async () => {
+      if (value === null) {
+        const user = localStorage.getItem("user")
+        setValue(JSON.parse(user))
+      }
+      return
+    }
+    fetchUser()
+  }, [])
+  console.log(value)
+
+  //check if context is available with components and pass local storage to context
   return (
     // react router dom router wraps the routes; removed the switch
     <Router>
