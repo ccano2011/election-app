@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Nav.css';
-import BallotImg from '../../../Assets/ballot.svg';
+import BallotImg from '../../../Assets/account.png';
 import LogoImg from '../../../Assets/logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import { NavLink } from 'react-router-dom';
@@ -80,7 +80,7 @@ class Nav extends Component {
                         </NavLink>
                         <NavLink className='link' to="/account-landing-page">
                             <div className='ballotIcon'>
-                                <img className='svg' src={BallotImg} alt='account' />
+                                <img className='logo' height='60' weight='60' src={BallotImg} alt='account' />
                             </div>
                         </NavLink>
                     </div>
