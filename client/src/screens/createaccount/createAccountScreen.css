@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 .deletedSubHeader {
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
@@ -19,3 +20,28 @@
       background-color: #061540;
       margin-bottom: 0;
   }
+ 
+label {
+  font-family: 'Dosis', sans-serif;
+}
+
+.arrow {
+  float: left;
+  margin-left: 15px;
+  padding-top: 1px;
+  cursor: pointer;
+}
+
+.user-header{
+  font-family: 'Dosis', sans-serif;
+  margin-top: 100px;
+
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 50px;
+}
