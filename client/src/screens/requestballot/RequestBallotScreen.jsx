@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './RequestBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { createRequest } from '../../services/ballotConnect.js'
@@ -6,9 +6,12 @@ import { Link, useHistory } from "react-router-dom"
 //ToggleDisplay from an npm package I found online
 // import ToggleDisplay from 'react-toggle-display'
 import ArrowImg from '../../Assets/left-arrow.svg';
+import CreateUsers from '../../components/createuser/CreateUser'
+
 
 
 const RequestBallotScreen = () => {
+  const { value } = useContext(CreateUsers)
 
   const [ballot, setBallot] = useState({
     firstName: '',
@@ -54,7 +57,7 @@ const RequestBallotScreen = () => {
         <Link to='/dashboard'>
           <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
         </Link>
-        <p className="headline">Request an Absentee Ballot</p>
+        <p className="headline">Re-enter Your Info to Request an Absentee Ballot</p>
       </div>
       <div className="ballot-header">
         {/* <h4>Request an Absentee Ballot</h4> */}
@@ -68,6 +71,7 @@ const RequestBallotScreen = () => {
               className="firstName"
               value={ballot.firstName}
               name='firstName'
+              placeholder={value[2]}
               required
               onChange={handleChange}
             />
@@ -78,6 +82,7 @@ const RequestBallotScreen = () => {
               className="lastName"
               value={ballot.lastName}
               name='lastName'
+              placeholder={value[3]}
               required
               onChange={handleChange}
             />
@@ -90,6 +95,7 @@ const RequestBallotScreen = () => {
               className="address"
               value={ballot.streetAddress}
               name='streetAddress'
+              placeholder={value[4]}
               required
               onChange={handleChange}
             />
@@ -108,6 +114,7 @@ const RequestBallotScreen = () => {
             <input
               className="city"
               value={ballot.city}
+              placeholder={value[5]}
               name='city'
               required
               onChange={handleChange}
@@ -118,6 +125,7 @@ const RequestBallotScreen = () => {
             <input
               className="county"
               value={ballot.county}
+              placeholder={value[6]}
               name='county'
               required
               onChange={handleChange}
@@ -130,35 +138,39 @@ const RequestBallotScreen = () => {
               type='number'
               value={ballot.zipCode}
               name='zipCode'
+              placeholder={value[7]}
               required
               onChange={handleChange}
             />
           </label> <br />
           <div className="dob">
             <label>
-              Date of Birth<br />
+              Date of Birth (MM/DD/Year)<br />
               <input
                 type='number'
                 className="month"
                 value={ballot.month}
+                placeholder={value[10]}
                 name="month"
-                placeholder="MM"
+                // placeholder="MM"
                 onChange={handleChange}
               />
               <input
                 type='number'
                 className="day"
                 value={ballot.day}
+                placeholder={value[11]}
                 name="day"
-                placeholder="DD"
+                // placeholder="DD"
                 onChange={handleChange}
               />
               <input
                 type='number'
                 className="year"
                 value={ballot.year}
+                placeholder={value[12]}
                 name="year"
-                placeholder="Year"
+                // placeholder="Year"
                 onChange={handleChange}
               />
             </label>
@@ -170,6 +182,7 @@ const RequestBallotScreen = () => {
               className="email"
               value={ballot.email}
               name='email'
+              placeholder={value[8]}
               onChange={handleChange}
             />
           </label>
@@ -178,6 +191,7 @@ const RequestBallotScreen = () => {
             <input
               className="cell"
               value={ballot.cell}
+              placeholder={value[9]}
               name='cell'
               onChange={handleChange}
             />

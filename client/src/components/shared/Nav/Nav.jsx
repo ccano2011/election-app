@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Nav.css';
-import BallotImg from '../../../Assets/ballot.svg';
+import BallotImg from '../../../Assets/account.png';
 import LogoImg from '../../../Assets/logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import { NavLink } from 'react-router-dom';

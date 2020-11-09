@@ -26,12 +26,14 @@
 }
 
 .accountInfo{
+  font-family: 'Dosis', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: left;
   align-items: center;
 }
 .delete-account, .username, .password, .logout{
+  font-family: 'Dosis', sans-serif;
   padding: 1rem; 
   border-radius: 30px;
   border: 2px solid;
@@ -39,8 +41,11 @@
   font-family: 'Dosis', sans-serif;
   width: 300px;
   height: 6px;
+  color: black;
+  text-align: center;
 }
 
-.logout a{
-  text-decoration: none;
+.delete-account:hover, .logout:hover {
+  background-color: #D6DDF3;
 }
+
