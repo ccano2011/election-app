@@ -6,22 +6,26 @@ import { Link } from "react-router-dom"
 import CreateUsers from '../../components/createuser/CreateUser'
 
 
-function AccountLandingPage() {
+function AccountLandingPage(props) {
   const { value } = useContext(CreateUsers)
 
   return (
     <div className="whole-page">
       <Nav />
-      <div className='subHeader'>
-        <Link to='/dashboard'>
-          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+      <div className="subHeader">
+        <Link to="/dashboard">
+          <img
+            className="arrow"
+            src={ArrowImg}
+            alt="arrow"
+            height="25"
+            weight="25"
+          />
         </Link>
         <p className="headline">My Account</p>
       </div>
 
-      <div className="accountImage">
-        {/* image renders from in state */}
-      </div>
+      <div className="accountImage"></div>
 
       <div className="accountInfo">
         {/* Username renders from react state to find username  */}
@@ -38,7 +42,7 @@ function AccountLandingPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default AccountLandingPage
+export default AccountLandingPage;
