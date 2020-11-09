@@ -29,11 +29,11 @@ function AccountLandingPage() {
         <p className="accountUsername">Username: {value[0]}</p>
         <p className="accountPassword">Password: {value[1]}</p>
         <p className="accountName">Name: {value[2]} {value[3]}</p>
-        <Link to='/'>
+        <Link style={{ textDecoration: 'none' }} to='/'>
           <p className="logout">Log Out </p>
         </Link>
         {/* button with link to delete account screen */}
-        <Link to='/delete-account'>
+        <Link style={{ textDecoration: 'none' }} to='/delete-account'>
           <p className="delete-account">Delete Account</p>
         </Link>
       </div>
