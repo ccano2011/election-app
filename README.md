@@ -1,6 +1,8 @@
 # Ballot Request App:
 A collaborative team project with UX/UI
 
+Deployed App: https://ballot-request-elections-app.netlify.app
+
 Team Members:
 
 - Annie Wang (https://github.com/annie1289)
