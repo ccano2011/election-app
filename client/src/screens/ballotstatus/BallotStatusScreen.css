@@ -16,7 +16,6 @@
   align-items: center;
   margin: 0 auto;
   width: 400px;
-  /* background-color: teal; */
 }
 
 .logo-background {
@@ -90,7 +89,6 @@
 
 .progress-bar{
   margin: 0 auto;
-  padding-top: 150px;
 }
 
 .lilguy{

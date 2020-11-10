@@ -4,7 +4,6 @@ import axios from "axios";
 import "./LogIn.css";
 import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
-// import { userInfo } from 'os';
 
 function LogIn() {
   const [user, setUser] = useState({
@@ -29,22 +28,20 @@ const [loggedIn, setLoggedIn] = useState(false);
   }
 
   return (
-    <div className="login-page">
-      <form className="login-form">
+    <div className="login-page-home">
+      <form className="login-form-home">
         <label>
           Username <br />
-          <input type="username" />
+          <input className='username-home'/>
         </label>
         <label>
           Password <br />
-          <input type="password" />
+          <input type='password' className='username-home'/>
         </label>
-        <div className="logInButton">
-          <LogInButton onClick={() => setUser()} />
-        </div>
       </form>
 
-      <div className="buttons">
+      <div className="buttons-home">
+        <LogInButton onClick={() => setUser()} />
         <SignUpButton />
       </div>
     </div>

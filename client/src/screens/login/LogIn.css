@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
-.login-page {
+.login-page-home {
     background-image: url(../../Assets/electionsbackground.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -16,7 +16,7 @@
     /* background-repeat: round; */
   }
 
-.login-form{
+.login-form-home{
     margin: 0 auto;
     margin-top: 300px;
     display: flex;
@@ -30,29 +30,20 @@
     border-radius: 15px;
 }
 
-.buttons {
+.buttons-home {
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    margin-top: 50px;
+    margin: 50px;
 }
 
-.logInButton{
-  margin-top: 60px;
-}
-
-
-input {
+.username-home {
     font-family: 'Dosis', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    height: 35px;
-    background-color: rgb(197, 197, 197);
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    height: 35px !important;
+    background-color: rgb(197, 197, 197) !important;
     border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 25px !important;
     text-align: center;
 }
 
-label {
-    font-size: 25px;
-}

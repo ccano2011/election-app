@@ -1,35 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
-.arrow2 {
+.arrow1 {
   float: left;
   margin-left: 15px;
   padding-top: 1px;
   cursor: pointer;
 }
 
-.ballotRequest2{
+.ballotRequest1{
   font-family: 'Dosis', sans-serif;
   margin-top: 100px;
 
 }
-.ballot-container2{
+.ballot-container1{
   font-family: 'Dosis', sans-serif;
   margin-top: 40px;
 }
-.ballot-form2{
+.ballot-form1{
   font-family: 'Dosis', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: left;
-  align-items: center ;
+  align-items: center;
   margin-bottom: 50px;
 }
-.headline2 {
+.headline1 {
   padding-top: 3px;
   padding-right: 15px;
 }
 
-.subHeader2 {
+.subHeader1 {
   font-family: 'Dosis', sans-serif;
   font-weight: 700;
   background-color: #AEBCE6;
@@ -41,13 +41,13 @@
 }
 
 input{
-  font-family: 'Dosis', sans-serif !important;
-  border-radius: 7px !important;
-  border-color: rgb(0, 0, 0) !important;
-  background-color: rgb(243, 243, 243) !important;
+  font-family: 'Dosis', sans-serif;
+  border-radius: 7px;
+  border-color: rgb(0, 0, 0);
+  background-color: rgb(243, 243, 243);
   margin: 5px;
   width: 250px;
-  height: 25px !important;
+  height: 25px;
   outline: none;
   transition: 0.4s;
 }
@@ -65,51 +65,55 @@ input:focus {
 }
 
 label{
-  font-size: 18px !important;
-  font-weight: bolder !important;
+  font-size: 18px;
+  font-weight: bolder;
 }
+/* .street, .apt, .cit, .stat, .zip {
+  color: rgb(97, 92, 92);
+} */
 
-.reg-question2{
+.reg-question1{
   display: flex;
   flex-wrap: wrap;
   font-weight: bold;
+  /* width: 10%; */
   text-align: match-parent;
   margin-bottom: 20px;
 }
 
-.dob2{
+.dob1{
   text-align: center;
   font-weight: 300;
 }
-.day2, .month2{
+.day1, .month1{
   font-family: 'Dosis', sans-serif;
   border-radius: 0px;
   background-color: rgb(231, 224, 224);
-  border: 1px solid black;
+  border: none;
   padding: 2px;
   margin: 3.4px;
   height: 30px;
   width: 40px;
   text-align: center;
 }
-.year2{
+.year1{
   font-family: 'Dosis', sans-serif;
   border-radius: 0px;
-  border: 1px solid black;
   background-color: rgb(233, 224, 224);
+  border: none;
   padding: 2px;
   margin: 3.4px;
   height: 30px;
   width: 55px;
   text-align: center;
 }
-.firstNameLabel2, .lastNameLabel2{
+.firstNameLabel1, .lastNameLabel1{
   font-family: 'Dosis', sans-serif;
   font-weight: bolder;
   padding: 3px;
 }
 
-.confirm-button2{
+.confirm-button1{
   text-align: match-parent;
   font-family: 'Dosis', sans-serif;
   font-size: 18px;
@@ -123,15 +127,14 @@ label{
   background-color: white;
   border: 1px solid black;
   outline: none;
-  transition: all .3s ease-in-out;
 }
 button:hover{
   background-color:#D6DDF3;
 }
-.em2, .cellPhone2{
+.em1, .cellPhone1{
   font-weight: bold;
 }
-.cancel-button2{
+.cancel-button1{
   font-size: 12px;
   border: 1px solid black;
   font-family: 'Dosis', sans-serif;
@@ -145,17 +148,18 @@ button:hover{
   float: left;
   cursor: pointer;
   outline: none;
-  transition: all .3s ease-in-out;
+  
+}
+.cancel-button1 a{
+  text-decoration: none;
+  color: black;
+  
 }
 
-.firstName2 {
-  font-family: 'Dosis', sans-serif !important;
+.firstName1 {
+  font-family: 'Dosis', sans-serif;
 }
 
-.info2 {
-  font-weight: 400 !important;
-}
-
-.confirm-button2:hover, .cancel-button2:hover {
-  transform: scale(1.1);
+.info1 {
+  font-weight: 400;
 }

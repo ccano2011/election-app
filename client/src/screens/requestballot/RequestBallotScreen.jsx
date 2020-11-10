@@ -51,35 +51,35 @@ const RequestBallotScreen = () => {
   }
 
   return (
-    <div className="ballotRequest">
+    <div className="ballotRequest2">
       <Nav />
-      <div className='subHeader'>
+      <div className='subHeader2'>
         <Link to='/dashboard'>
-          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+          <img className='arrow2' src={ArrowImg} alt='arrow' height='25' weight='25' />
         </Link>
-        <p className="headline">Re-enter Your Info to Request an Absentee Ballot</p>
+        <p className="headline2">Re-enter Your Info to Request an Absentee Ballot</p>
       </div>
-      <div className="ballot-header">
+      <div className="ballot-header2">
         {/* <h4>Request an Absentee Ballot</h4> */}
       </div>
       {/* <div><h1>Sumbitting...</h1></div> */}
-      <div className="ballot-container">
-        <form className="ballot-form" onSubmit={handleSubmit}>
-          <label className="first">
+      <div className="ballot-container2">
+        <form className="ballot-form2" onSubmit={handleSubmit}>
+          <label className="firstNameLabel2">
             First Name <br />
             <input
-              className="firstName"
+              className="firstName2"
               value={ballot.firstName}
-              name='firstName'
+              name='firstName2'
               placeholder={value[2]}
               required
               onChange={handleChange}
             />
           </label>
-          <label className="last">
+          <label className="lastNameLabel2">
             Last Name <br />
             <input
-              className="lastName"
+              className="lastName2"
               value={ballot.lastName}
               name='lastName'
               placeholder={value[3]}
@@ -88,11 +88,11 @@ const RequestBallotScreen = () => {
             />
           </label>
           <br />
-          <h4 className="reg-question">Where are you registered to vote?</h4>
-          <label className="street">
+          <h4 className="reg-question2">Where are you registered to vote?</h4>
+          <label className="info2">
             Street Address <br />
             <input
-              className="address"
+              className="address2"
               value={ballot.streetAddress}
               name='streetAddress'
               placeholder={value[4]}
@@ -100,19 +100,19 @@ const RequestBallotScreen = () => {
               onChange={handleChange}
             />
           </label>
-          <label className="apt">
+          <label className="info2">
             Apartment/Suite <br />
             <input
-              className="aptSuite"
+              className="aptSuite2"
               value={ballot.apartmentSuite}
               name='apartmentSuite'
               onChange={handleChange}
             />
           </label>
-          <label className="cit">
+          <label className="info2">
             City <br />
             <input
-              className="city"
+              className="city2"
               value={ballot.city}
               placeholder={value[5]}
               name='city'
@@ -120,10 +120,10 @@ const RequestBallotScreen = () => {
               onChange={handleChange}
             />
           </label>
-          <label className="stat">
+          <label className="info2">
             County <br />
             <input
-              className="county"
+              className="county2"
               value={ballot.county}
               placeholder={value[6]}
               name='county'
@@ -131,10 +131,10 @@ const RequestBallotScreen = () => {
               onChange={handleChange}
             />
           </label>
-          <label className="zip">
+          <label className="info2">
             Zip Code <br />
             <input
-              className="zipCode"
+              className="zipCode2"
               type='number'
               value={ballot.zipCode}
               name='zipCode'
@@ -143,12 +143,12 @@ const RequestBallotScreen = () => {
               onChange={handleChange}
             />
           </label> <br />
-          <div className="dob">
+          <div className="dob2">
             <label>
               Date of Birth (MM/DD/Year)<br />
               <input
                 type='number'
-                className="month"
+                className="month2"
                 value={ballot.month}
                 placeholder={value[10]}
                 name="month"
@@ -157,7 +157,7 @@ const RequestBallotScreen = () => {
               />
               <input
                 type='number'
-                className="day"
+                className="day2"
                 value={ballot.day}
                 placeholder={value[11]}
                 name="day"
@@ -166,7 +166,7 @@ const RequestBallotScreen = () => {
               />
               <input
                 type='number'
-                className="year"
+                className="year2"
                 value={ballot.year}
                 placeholder={value[12]}
                 name="year"
@@ -176,28 +176,28 @@ const RequestBallotScreen = () => {
             </label>
           </div>
           <br />
-          <label className='em'>
+          <label className='info2'>
             Email Address <br />
             <input
-              className="email"
+              className="email2"
               value={ballot.email}
               name='email'
               placeholder={value[8]}
               onChange={handleChange}
             />
           </label>
-          <label className="cellPhone">
+          <label className="info2">
             Cell phone Number <br />
             <input
-              className="cell"
+              className="cell2"
               value={ballot.cell}
               placeholder={value[9]}
               name='cell'
               onChange={handleChange}
             />
           </label>
-          <button type='submit' className="confirm-button" >Confirm</button>
-          <Link to="/dashboard"><button className='cancel-button'>Cancel</button></Link>
+          <button type='submit' className="confirm-button2" >Confirm</button>
+          <Link to="/dashboard"><button className='cancel-button2'>Cancel</button></Link>
         </form>
       </div>
     </div>
