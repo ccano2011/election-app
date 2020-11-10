@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import "./LogIn.css";
 import CreateUsers from '../../components/createuser/CreateUser';
-// import LogInButton from "../../components/shared/Buttons/LogIn";
+import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
 import { login } from "../../services/usersConnect"
 // import { userInfo } from 'os';
@@ -47,13 +47,17 @@ function LogIn() {
     return (
         <div className="login-page-home">
             <form className="login-form-home" onSubmit={handleSubmit}>
+                <div className='input-div'>
                 <label htmlFor='username'><p className='login-label'>Username</p></label>
+                </div>
                 <input className="username-home-input"
                     name="username"
                     onChange={handleChange}
                     value={user.username} />
 
+                <div className='input-div'>
                 <label htmlFor="password"><p className='login-label'>Password</p></label>
+                </div>
                 <input type="password" className="username-home-input"
                     name="password"
                     onChange={handleChange}
@@ -61,10 +65,12 @@ function LogIn() {
                 />
                 
                 <div className="buttons-home">
-                    <button type="submit">Submit</button>
-                    <SignUpButton />
+                <button className='login-button' type="submit">Log In</button>
                 </div>
                 </form>
+                <div className='signup-btn'>
+                <SignUpButton />
+                </div>
         </div >
     );
 }
