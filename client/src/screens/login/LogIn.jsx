@@ -3,10 +3,9 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 import "./LogIn.css";
 import CreateUsers from '../../components/createuser/CreateUser';
-import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
 import { login } from "../../services/usersConnect"
-// import { userInfo } from 'os';
+
 
 function LogIn() {
     const { value, setValue } = useContext(CreateUsers)
