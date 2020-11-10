@@ -1,12 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import "./LogIn.css";
 import CreateUsers from '../../components/createuser/CreateUser';
-// import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
 import { login } from "../../services/usersConnect"
-// import { userInfo } from 'os';
+
 
 function LogIn() {
     const { value, setValue } = useContext(CreateUsers)
@@ -47,25 +46,31 @@ function LogIn() {
     return (
         <div className="login-page-home">
             <form className="login-form-home" onSubmit={handleSubmit}>
+                <div className='input-div'>
                 <label htmlFor='username'><p className='login-label'>Username</p></label>
-          <input className="username-home-input"
-            type = "text"
+                </div>
+                <input className="username-home-input"
+                    type="text"
                     name="username"
                     onChange={handleChange}
                     value={user.username} />
 
+                <div className='input-div'>
                 <label htmlFor="password"><p className='login-label'>Password</p></label>
+                </div>
                 <input type="password" className="username-home-input"
                     name="password"
                     onChange={handleChange}
                     value={user.password}
                 />
-                <div className="buttons-home">
-                    <button type="submit">Submit</button>
-                    <SignUpButton />
-          </div>
-          </form>
 
+                <div className="buttons-home">
+                <button className='login-button' type="submit">Log In</button>
+                </div>
+                </form>
+                <div className='signup-btn'>
+                <SignUpButton />
+                </div>
         </div >
     );
 }
