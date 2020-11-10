@@ -52,14 +52,12 @@ function DeleteAccount(props) {
       <div className='delete-p'>
         <p>Are you sure you would like to delete your account?</p>
       </div>
-      <div className='buttons'>
-        <div className='cancel-btn'>
+      <div className='cancel-btn'>
           <Link to="/account-landing-page"><button className="cancelAccountBtn" >Cancel</button></Link>
         </div>
         <div className='delete-btn'>
           <button className="deleteAccountBtn" onClick={handleDelete} >Confirm</button>
         </div>
-      </div>
     </div>
   );
 }

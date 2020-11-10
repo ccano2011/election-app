@@ -179,7 +179,7 @@ const CreateAccountScreen = () => {
                             />
                             <input
                                 type='number'
-                                className="year"
+                                className="years"
                                 value={user.year}
                                 name="year"
                                 placeholder="Year"
