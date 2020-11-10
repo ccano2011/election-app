@@ -48,7 +48,8 @@ function LogIn() {
         <div className="login-page-home">
             <form className="login-form-home" onSubmit={handleSubmit}>
                 <label htmlFor='username'><p className='login-label'>Username</p></label>
-                <input className="username-home-input"
+          <input className="username-home-input"
+            type = "text"
                     name="username"
                     onChange={handleChange}
                     value={user.username} />
@@ -59,11 +60,12 @@ function LogIn() {
                     onChange={handleChange}
                     value={user.password}
                 />
-                </form>
                 <div className="buttons-home">
                     <button type="submit">Submit</button>
                     <SignUpButton />
-                </div>
+          </div>
+          </form>
+
         </div >
     );
 }
