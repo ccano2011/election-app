@@ -59,11 +59,12 @@ function LogIn() {
                     onChange={handleChange}
                     value={user.password}
                 />
-                </form>
+                
                 <div className="buttons-home">
                     <button type="submit">Submit</button>
                     <SignUpButton />
                 </div>
+                </form>
         </div >
     );
 }
