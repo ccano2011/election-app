@@ -51,10 +51,10 @@ function App() {
           <Route path="/edit-ballot/:id" component={EditBallotScreen} />
           <Route path="/request-confirmed" component={RequestConfirmed} />
           <Route path="/create-account" component={CreateAccountScreen} />
-          {value ? <Route path="/request-ballot" component={RequestBallotScreen} /> : <Link to="/">Sorry, you're not logged in. Return home.</Link>}
-          {value ? <Route path="/account-landing-page" component={AccountLandingPage} /> : <Link to="/">Sorry, you're not logged in. Return home.</Link>}
-          {value ? <Route path="/delete-account" component={DeleteAccount} /> : <Link to="/">Sorry, you're not logged in. Return home.</Link>}
-          {value ? <Route path="/account-deleted" component={AccountDeleted} /> : <Link to="/">Sorry, you're not logged in. Return home.</Link>}
+          {value && <Route path="/request-ballot" component={RequestBallotScreen} />}
+          {value && <Route path="/account-landing-page" component={AccountLandingPage} />}
+          {value && <Route path="/delete-account" component={DeleteAccount} />}
+          <Route path="/account-deleted" component={AccountDeleted} />
         </CreateUsers.Provider>
       </div>
     </Router>
