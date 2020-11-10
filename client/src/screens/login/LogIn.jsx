@@ -18,17 +18,6 @@ function LogIn() {
 
     const [loggedIn, setLoggedIn] = useState(false);
 
-    // useEffect(() => {
-    //   const response = `https://election-ballot-app.herokuapp.com/user`;
-    //   const makeCall = async () => {
-    //     const res = await axios.get(response);
-    //     setUser(res.data);
-    //   };
-    //   makeCall();
-    // }, []);
-    // console.log(user);
-
-
     if (loggedIn) {
         return <Redirect to={"/dashboard"} />;
     }
@@ -56,37 +45,28 @@ function LogIn() {
     }
 
     return (
-        <div className="login-page">
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="username">Username</label>
-                <input type="text"
+        <div className="login-page-home">
+            <form className="login-form-home" onSubmit={handleSubmit}>
+                <label htmlFor='username'>Username</label>
+                <input className="username-home"
                     name="username"
                     onChange={handleChange}
                     value={user.username} />
 
                 <label htmlFor="password"> Password</label>
-                <input type="password"
+                <input type="password" className="username-home"
                     name="password"
                     onChange={handleChange}
                     value={user.password}
                 />
 
-                <div className="logInButton">
-                    <button type="submit">Submit</button>
+                <div className="buttons-home">
+                  <button type="submit">Submit</button>
+                  <SignUpButton />
                 </div>
             </form>
-
-            <div className="buttons">
-                <SignUpButton />
-            </div>
         </div >
     );
 }
 
 export default LogIn
-
-//backend: express controller route called 'login
-//take the username (i.e. const User= User.find({username;req.body.username}))
-// /if user.pasword===rec.body.password, if it's true then res.JSON(user)
-
-//react-side: response from the axios, then you have a user. put it in the react State

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import './App.css';
 import Home from '../src/screens/home/Home'
+// import Nav from './components/shared/Nav/Nav'
 import RequestBallotScreen from "./screens/requestballot/RequestBallotScreen"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import DisclaimerScreen from "./screens/disclaimer/DisclaimerScreen";
@@ -29,9 +30,10 @@ function App() {
         const user = localStorage.getItem("user")
         setValue(JSON.parse(user))
       }
+      return
     }
     fetchUser()
-  })
+  }, [])
   console.log(value)
 
   //check if context is available with components and pass local storage to context

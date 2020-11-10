@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './RequestBallotScreen.css';
+import './EditBallotScreen.css';
 import Nav from '../../components/shared/Nav/Nav'
 import { updateRequest, getRequest } from '../../services/ballotConnect.js'
 import { Link, useHistory, useParams } from "react-router-dom"
@@ -55,33 +55,33 @@ const EditBallotScreen = (props) => {
     }
 
     return (
-        <div className="ballotRequest">
+        <div className="ballotRequest1">
             <Nav />
-            <div className='subHeader'>
+            <div className='subHeader1'>
                 <Link to='/dashboard'>
-                    <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
+                    <img className='arrow1' src={ArrowImg} alt='arrow' height='25' weight='25' />
                 </Link>
-                <p className="headline">Edit Your Ballot Request</p>
+                <p className="headline1">Edit Your Ballot Request</p>
             </div>
-            <div className="ballot-header">
+            <div className="ballot-header1">
                 <h4>Edit your Request Form</h4>
             </div>
-            <div className="ballot-container">
-                <form className="ballot-form" onSubmit={handleSubmit}>
-                    <label className="first">
+            <div className="ballot-container1">
+                <form className="ballot-form1" onSubmit={handleSubmit}>
+                    <label className="firstNameLabel1">
                         First Name <br />
                         <input
-                            className="firstName"
+                            className="firstName1"
                             value={ballot.firstName}
                             name='firstName'
                             required
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="last">
+                    <label className="lastNameLabel1">
                         Last Name <br />
                         <input
-                            className="lastName"
+                            className="lastName1"
                             value={ballot.lastName}
                             name='lastName'
                             required
@@ -89,73 +89,73 @@ const EditBallotScreen = (props) => {
                         />
                     </label>
                     <br />
-                    <h4 className="reg-question">Where are you registered to vote?</h4>
-                    <label className="street">
+                    <h4 className="reg-question1">Where are you registered to vote?</h4>
+                    <label className="street1">
                         Street Address <br />
                         <input
-                            className="address"
+                            className="address1"
                             value={ballot.streetAddress}
                             name='streetAddress'
                             required
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="apt">
+                    <label className="apt1">
                         Apartment/Suite <br />
                         <input
-                            className="aptSuite"
+                            className="aptSuite1"
                             value={ballot.apartmentSuite}
                             name='author'
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="cit">
+                    <label className="cit1">
                         City <br />
                         <input
-                            className="city"
+                            className="city1"
                             value={ballot.city}
                             name='city'
                             required
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="stat">
+                    <label className="stat1">
                         County <br />
                         <input
-                            className="county"
+                            className="county1"
                             value={ballot.county}
                             name='county'
                             required
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="zip">
+                    <label className="zip1">
                         Zip Code <br />
                         <input
-                            className="zipCode"
+                            className="zipCode1"
                             value={ballot.zipCode}
                             name='zipCode'
                             required
                             onChange={handleChange}
                         />
                     </label> <br />
-                    <div className="dob">
+                    <div className="dob1">
                         <label>
                             Date of Birth <br />
                             <input
-                                className="day"
+                                className="day1"
                                 value={ballot.day}
                                 name="day"
                                 onChange={handleChange}
                             />
                             <input
-                                className="month"
+                                className="month1"
                                 value={ballot.month}
                                 name="month"
                                 onChange={handleChange}
                             />
                             <input
-                                className="year"
+                                className="year1"
                                 value={ballot.year}
                                 name="year"
                                 onChange={handleChange}
@@ -163,26 +163,26 @@ const EditBallotScreen = (props) => {
                         </label>
                     </div>
                     <br />
-                    <label className='em'>
+                    <label className='em1'>
                         Email Address <br />
                         <input
-                            className="email"
+                            className="email1"
                             value={ballot.email}
                             name='email'
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="cellPhone">
+                    <label className="cellPhone1">
                         Cell Phone Number <br />
                         <input
-                            className="cell"
+                            className="cell1"
                             value={ballot.cell}
                             name='cell'
                             onChange={handleChange}
                         />
                     </label>
-                    <button type='submit' className="confirm-button" >Confirm</button>
-                    <Link to="/dashboard" ><button className='cancel-button'>Cancel</button></Link>
+                    <button type='submit' className="confirm-button1" >Confirm</button>
+                    <Link to="/dashboard" ><button className='cancel-button1'>Cancel</button></Link>
 
                 </form>
             </div>

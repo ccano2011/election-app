@@ -47,7 +47,7 @@ function DeleteAccount(props) {
         <Link to="/account-landing-page">
           <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
         </Link>
-        <p className="headline">DELETE ACCOUNT</p>
+        <p className="headline">Delete Account</p>
       </div>
       <div className='delete-p'>
         <p>Are you sure you would like to delete your account?</p>

@@ -10,6 +10,16 @@
   cursor: pointer;
 }
 
+.accountUsername, .accountPassword, .accountName {
+  border: 2px solid black;
+  width: 360px;
+  height: 30px;
+  border-radius: 22px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-bottom: -10px;
+}
+
 .headline {
   padding-top: 3px;
   padding-right: 45px;
@@ -31,7 +41,14 @@
   flex-direction: column;
   text-align: left;
   align-items: center;
+  margin-top: 40px;
 }
+
+.accountImage {
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
 .delete-account, .username, .password, .logout{
   font-family: 'Dosis', sans-serif;
   padding: 1rem; 
@@ -45,7 +62,30 @@
   text-align: center;
 }
 
-.delete-account:hover, .logout:hover {
-  background-color: #D6DDF3;
+.delete-account, .logout {
+  transition: all .3s ease-in-out;
 }
 
+.delete-account:hover, .logout:hover {
+  background-color: #D6DDF3;
+  transform: scale(1.1);
+}
+
+.logout {
+  height: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 80px;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete-account{
+  height: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  color: red;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+}
