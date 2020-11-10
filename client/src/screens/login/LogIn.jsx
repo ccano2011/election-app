@@ -60,11 +60,12 @@ function LogIn() {
                     onChange={handleChange}
                     value={user.password}
                 />
+
                 <div className="buttons-home">
                     <button type="submit">Submit</button>
                     <SignUpButton />
                 </div>
-            </form>
+                </form>
         </div >
     );
 }
