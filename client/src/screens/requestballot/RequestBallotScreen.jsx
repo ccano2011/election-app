@@ -70,7 +70,7 @@ const RequestBallotScreen = () => {
             <input
               className="firstName2"
               value={ballot.firstName}
-              name='firstName2'
+              name='firstName'
               placeholder={value[2]}
               required
               onChange={handleChange}
