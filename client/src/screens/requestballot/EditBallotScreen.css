@@ -68,9 +68,6 @@ label{
   font-size: 18px;
   font-weight: bolder;
 }
-/* .street, .apt, .cit, .stat, .zip {
-  color: rgb(97, 92, 92);
-} */
 
 .reg-question1{
   display: flex;
