@@ -1,57 +1,72 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Redirect } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import "./LogIn.css";
+import CreateUsers from '../../components/createuser/CreateUser';
 import LogInButton from "../../components/shared/Buttons/LogIn";
 import SignUpButton from "../../components/shared/Buttons/SignUp";
+import { login } from "../../services/usersConnect"
+// import { userInfo } from 'os';
 
 function LogIn() {
-  const [user, setUser] = useState({
-    username: "",
-    password: "",
-  });
+    const { value, setValue } = useContext(CreateUsers)
+    console.log(value)
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+    });
 
-const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
 
-  useEffect(() => {
-    const response = `https://election-ballot-app.herokuapp.com/user`;
-    const makeCall = async () => {
-      const res = await axios.get(response);
-      setUser(res.data);
-    };
-    makeCall();
-  }, []);
-  console.log(user);
+    if (loggedIn) {
+        return <Redirect to={"/dashboard"} />;
+    }
 
-  if (loggedIn) {
-    return <Redirect to={"/dashboard"} />;
-  }
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setUser({
+            ...user,
+            [name]: value
+        })
+    }
 
-  return (
-    <div className="login-page-home">
-      <form className="login-form-home">
-        <label>
-          Username <br />
-          <input className='username-home'/>
-        </label>
-        <label>
-          Password <br />
-          <input type='password' className='username-home'/>
-        </label>
-      </form>
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        console.log(user)
+        try {
+            let tempUser = await login(user)
+            setValue(tempUser)
 
-      <div className="buttons-home">
-        <LogInButton onClick={() => setUser()} />
-        <SignUpButton />
-      </div>
-    </div>
-  );
+        }
+        catch (error) {
+            throw error
+        }
+        setLoggedIn(true)
+    }
+
+    return (
+        <div className="login-page-home">
+            <form className="login-form-home" onSubmit={handleSubmit}>
+                <label htmlFor='username'>Username</label>
+                <input className="username-home"
+                    name="username"
+                    onChange={handleChange}
+                    value={user.username} />
+
+                <label htmlFor="password"> Password</label>
+                <input type="password" className="username-home"
+                    name="password"
+                    onChange={handleChange}
+                    value={user.password}
+                />
+
+                <div className="buttons-home">
+                  <button type="submit">Submit</button>
+                  <SignUpButton />
+                </div>
+            </form>
+        </div >
+    );
 }
 
 export default LogIn
-
-//backend: express controller route called 'login
-//take the username (i.e. const User= User.find({username;req.body.username}))
-// /if user.pasword===rec.body.password, if it's true then res.JSON(user)
-
-//react-side: response from the axios, then you have a user. put it in the react State

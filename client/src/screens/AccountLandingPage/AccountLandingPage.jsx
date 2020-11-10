@@ -13,15 +13,9 @@ function AccountLandingPage(props) {
   return (
     <div className="whole-page">
       <Nav />
-      <div className="subHeader">
-        <Link to="/dashboard">
-          <img
-            className="arrow"
-            src={ArrowImg}
-            alt="arrow"
-            height="25"
-            weight="25"
-          />
+      <div className='subHeader'>
+        <Link to='/dashboard'>
+          <img className='arrow' src={ArrowImg} alt='arrow' height='25' weight='25' />
         </Link>
         <p className="headline">My Account</p>
       </div>
@@ -43,7 +37,7 @@ function AccountLandingPage(props) {
         </Link>
       </div>
     </div>
-  );
+  )
 }
 
-export default AccountLandingPage;
+export default AccountLandingPage
