@@ -40,15 +40,14 @@ function App() {
     <Router>
       <div className="App">
         {/* <Nav /> */}
-        <Route exact path='/' component={LogIn} />
-        <Route path='/dashboard' component={Home} />
-        <Route path='/status' component={BallotStatusScreen} />
-        <Route path='/disclaimer' component={DisclaimerScreen} />
-        <Route path="/admin" component={AdminScreen} />
-        <Route path="/edit-ballot/:id" component={EditBallotScreen} />
-        <Route path="/request-confirmed" component={RequestConfirmed} />
-        <Route path="/login" component={LogIn} />
         <CreateUsers.Provider value={providerValue}>
+          {value && <Route exact path='/' component={LogIn} />}
+          <Route path='/dashboard' component={Home} />
+          <Route path='/status' component={BallotStatusScreen} />
+          <Route path='/disclaimer' component={DisclaimerScreen} />
+          <Route path="/admin" component={AdminScreen} />
+          <Route path="/edit-ballot/:id" component={EditBallotScreen} />
+          <Route path="/request-confirmed" component={RequestConfirmed} />
           {value && <Route path="/create-account" component={CreateAccountScreen} />}
           {value && <Route path="/request-ballot" component={RequestBallotScreen} />}
           {value && <Route path="/account-landing-page" component={AccountLandingPage} />}
