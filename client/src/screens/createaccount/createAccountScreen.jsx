@@ -63,20 +63,20 @@ const CreateAccountScreen = () => {
                 {/* <button onClick={() => setValue('Value changed from within the "createAccountScreen.jsx"')}>click to change</button> */}
                 <form className="user-form" onSubmit={handleSubmit}>
                     {/* <img alt="Put your profile picture here"></img> */}
-                    <label className="user">
+                    <label className="user-label">
                         Create a Username: <br />
                         <input
-                            className="username"
+                            className="create"
                             value={user.username}
                             name='username'
                             required
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="pass">
+                    <label className="user-label">
                         Create a Password: <br />
                         <input
-                            className="password"
+                            className="create"
                             value={user.password}
                             name='password'
                             required
@@ -84,7 +84,7 @@ const CreateAccountScreen = () => {
                         />
                     </label>
                     <h3>Enter Your Info</h3>
-                    <label className="first">
+                    <label className="user-label">
                         First Name <br />
                         <input
                             className="firstName"
@@ -95,7 +95,7 @@ const CreateAccountScreen = () => {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="last">
+                    <label className="user-label">
                         Last Name <br />
                         <input
                             className="lastName"
@@ -160,10 +160,10 @@ const CreateAccountScreen = () => {
                     </label> <br />
                     <div className="dob">
                         <label>
-                            Date of Birth<br />
+                            Date of Birth (MM/DD/Year) <br />
                             <input
                                 type='number'
-                                className="month"
+                                className="date"
                                 value={user.month}
                                 name="month"
                                 placeholder="MM"
@@ -171,7 +171,7 @@ const CreateAccountScreen = () => {
                             />
                             <input
                                 type='number'
-                                className="day"
+                                className="date"
                                 value={user.day}
                                 name="day"
                                 placeholder="DD"
@@ -206,8 +206,8 @@ const CreateAccountScreen = () => {
                             onChange={handleChange}
                         />
                     </label>
-                    <button type='submit' className="confirm-button" >Confirm</button>
-                    <Link to="/"><button className='cancel-button'>Cancel</button></Link>
+                    <button type='submit' className="confirm-button-form" >Confirm</button>
+                    <Link to="/"><button className='cancel-button-form'>Cancel</button></Link>
                 </form>
             </div>
         </div>
