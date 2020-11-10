@@ -9,6 +9,9 @@ import AccountImg from '../../Assets/ExampleProfileImage.png';
 
 function AccountLandingPage(props) {
   const { value } = useContext(CreateUsers)
+  const onClick = () => {
+    localStorage.removeItem("user")
+  }
 
   return (
     <div className="whole-page">
@@ -29,7 +32,7 @@ function AccountLandingPage(props) {
         <p className="accountPassword">Password: {value[1]}</p>
         <p className="accountName">Name: {value[2]} {value[3]}</p>
         <Link style={{ textDecoration: 'none' }} to='/'>
-          <button className="logout">Log Out </button>
+          <button className="logout" onClick={onClick}>Log Out </button>
         </Link>
         {/* button with link to delete account screen */}
         <Link style={{ textDecoration: 'none' }} to='/delete-account'>

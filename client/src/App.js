@@ -33,7 +33,7 @@ function App() {
       return
     }
     fetchUser()
-  }, [])
+  })
   console.log(value)
 
   //check if context is available with components and pass local storage to context
@@ -43,18 +43,18 @@ function App() {
       <div className="App">
         {/* <Nav /> */}
         <CreateUsers.Provider value={providerValue}>
-          {value && <Route exact path='/' component={LogIn} />}
+          <Route exact path='/' component={LogIn} />
           <Route path='/dashboard' component={Home} />
           <Route path='/status' component={BallotStatusScreen} />
           <Route path='/disclaimer' component={DisclaimerScreen} />
           <Route path="/admin" component={AdminScreen} />
           <Route path="/edit-ballot/:id" component={EditBallotScreen} />
           <Route path="/request-confirmed" component={RequestConfirmed} />
-          {value && <Route path="/create-account" component={CreateAccountScreen} />}
+          <Route path="/create-account" component={CreateAccountScreen} />
           {value && <Route path="/request-ballot" component={RequestBallotScreen} />}
           {value && <Route path="/account-landing-page" component={AccountLandingPage} />}
           {value && <Route path="/delete-account" component={DeleteAccount} />}
-          {value && <Route path="/account-deleted" component={AccountDeleted} />}
+          <Route path="/account-deleted" component={AccountDeleted} />
         </CreateUsers.Provider>
       </div>
     </Router>
