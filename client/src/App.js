@@ -24,6 +24,7 @@ function App() {
   //everytime to pass in the value in the components. 
   const providerValue = useMemo(() => ({ value, setValue }), [value, setValue])
 
+  //the logic for the useEffect and localStorage integration was done under the help and guidance of Bruno
   useEffect(() => {
     const fetchUser = async () => {
       if (value === null) {
@@ -51,6 +52,8 @@ function App() {
           <Route path="/edit-ballot/:id" component={EditBallotScreen} />
           <Route path="/request-confirmed" component={RequestConfirmed} />
           <Route path="/create-account" component={CreateAccountScreen} />
+          {/* Thanks to Raul, Misha, & Shay for showing us the ternary option and 
+          guard option to help keep the data persisting from localStorage & state*/}
           {value && <Route path="/request-ballot" component={RequestBallotScreen} />}
           {value && <Route path="/account-landing-page" component={AccountLandingPage} />}
           {value && <Route path="/delete-account" component={DeleteAccount} />}

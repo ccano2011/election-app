@@ -29,6 +29,7 @@ function LogIn() {
         })
     }
 
+    //Janice helped us figure out the logic for login
     const handleSubmit = async (e) => {
         e.preventDefault()
         console.log(user)

@@ -1,6 +1,8 @@
 # Ballot Request App:
 A collaborative team project with UX/UI
 
+Deployed App: https://ballot-request-elections-app.netlify.app
+
 Team Members:
 
 - Annie Wang (https://github.com/annie1289)
@@ -37,9 +39,11 @@ Team Members:
 
 This concept app is a demonstration of how we can bring one aspect of the election process to the 21st century by allowing you to request an absentee ballot for the state of NY from your phone 
 
-# Schema
+# Schemas
+
 
 Our backend Ballot schema
+
 ```
 const RequestBallot = new Schema(
   {
@@ -57,6 +61,27 @@ const RequestBallot = new Schema(
 )
 
 module.exports = mongoose.model('RequestBallot', RequestBallot)
+
+const User = new Schema(
+    {
+        username: { type: String, required: true },
+        password: { type: String, required: true },
+        firstName: { type: String, required: true },
+        lastName: { type: String, required: true },
+        streetAddress: { type: String, required: true },
+        apartmentSuite: { type: String, required: false },
+        city: { type: String, required: true },
+        county: { type: String, required: true },
+        zipCode: { type: String, required: true },
+        day: { type: String, required: true },
+        month: { type: String, required: true },
+        year: { type: String, required: true },
+        email: { type: String, required: false },
+        cell: { type: String, required: false },
+    }
+);
+
+module.exports = mongoose.model('users', User)
 ```
 Our backend User schema
 ```
@@ -88,5 +113,3 @@ module.exports = mongoose.model('users', User)
 
 # Post-MVP
 
-- Dynamic styling/animation
-- User Login Ability (authentification)
